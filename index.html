@@ -26,14 +26,13 @@
     .navigation {
         background-color: #333;
         color: #fff;
-        text-align: center;
-        padding: 10px 0;
+        text-align: left; /* Align left */
+        padding: 10px 20px; /* Adjust padding */
     }
     .navigation a {
         color: #fff;
         text-decoration: none;
-        padding: 10px 20px;
-        margin: 0 10px;
+        margin-right: 20px; /* Add right margin */
     }
     .dropdown {
         position: relative;
@@ -52,7 +51,8 @@
         text-decoration: none;
         display: block;
     }
-    .dropdown:hover .dropdown-content {
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content { /* Show on hover or focus */
         display: block;
     }
     .main {
@@ -110,17 +110,47 @@
 </div>
 
 <div class="navigation">
-    <a href="#about">About</a>
     <div class="dropdown">
-        <a href="#" class="dropbtn">Short Stories</a>
+        <a href="#" class="dropbtn">Menu</a>
         <div class="dropdown-content">
-            <a href="#">Creative Non-Fiction</a>
-            <a href="#">Creative Fiction</a>
+            <a href="#about">About</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Short Stories</a>
+                <div class="dropdown-content">
+                    <a href="#">Creative Non-Fiction</a>
+                    <a href="#">Creative Fiction</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Mini Stories</a>
+                <div class="dropdown-content">
+                    <a href="#">Creative Non-Fiction</a>
+                    <a href="#">Creative Fiction</a>
+                </div>
+            </div>
+            <a href="#contact">Contact</a>
         </div>
     </div>
-    <div class="dropdown">
-        <a href="#" class="dropbtn">Mini Stories</a>
-        <div class="dropdown-content">
-            <a href="#">Creative Non-Fiction</a>
-            <a href="#">Creative Fiction</a>
-        </d
+</div>
+
+<div class="container">
+    <div class="main">
+        <div class="card">
+            <div class="card-header">
+                <h2>Featured Post</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Short Story: The Forgotten Forest</h3>
+                <p class="card-text">A tale of adventure and mystery...</p>
+                <a href="#" class="btn">Read Story</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Charity Williams</p>
+</div>
+
+</body>
+</html>
