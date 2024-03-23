@@ -1,85 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charity Williams - Writings Blog</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<style>
-    body {
-        font-family: 'Courier New', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #FFFFF0;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    .header {
-        background-color: #FFFFF0;
-        border-bottom: 1px solid #ddd;
-        padding: 30px 0;
-        text-align: center;
-        color: #DCE9BE;
-        font-size: 24px;
-    }
-    .navigation {
-        background-color: #DCE9BE;
-        color: black;
-        text-align: center; /* Align center */
-        padding: 20px 0; /* Adjust padding */
-    }
-    .navigation a {
-        color: black;
-        text-decoration: none;
-        margin-right: 20px;
-        font-size: 18px; /* Increase font size */
-    }
-    .main {
-        background-color: #fff;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    .footer {
-        background-color: #DCE9BE;
-        color: black;
-        text-align: center;
-        padding: 15px 0;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Williams - Writings Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFF0; /* Updated background color */
+            color: black; /* Changed header font color to black */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header {
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 30px 0; /* Increased padding top and bottom */
+            text-align: center;
+        }
+
+        .navigation {
+            text-align: right; /* Align right */
+            padding: 10px 20px; /* Adjust padding */
+        }
+
+        .menu-icon {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .menu-icon::before,
+        .menu-icon::after {
+            content: "";
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+        }
+
+        .main {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .card {
+            background-color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .card-text {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="header">
-    <h1>Charity Williams</h1>
-    <p>Welcome to My Writing Blog!</p>
-</div>
+    <div class="header">
+        <h1>Charity Williams</h1>
+        <p>Welcome to My Writing Blog!</p>
+    </div>
 
-<div class="navigation">
-    <a href="menu.html">Short Stories</a>
-    <a href="menu.html">Mini Stories</a>
-</div>
+    <div class="navigation">
+        <a href="menu.html" class="menu-icon"></a> <!-- Link to the menu page -->
+    </div>
 
-<div class="container">
-    <div class="main">
-        <div class="card">
-            <div class="card-header">
-                <h2>Featured Post</h2>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Short Story: The Forgotten Forest</h3>
-                <p class="card-text">A tale of adventure and mystery...</p>
-                <a href="#" class="btn">Read Story</a>
+    <div class="container">
+        <div class="main">
+            <!-- Featured Stories Feed -->
+            <div class="card">
+                <div class="card-header">
+                    <h2>Featured Stories</h2>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Story Title 1</h3>
+                    <p class="card-text">Short description...</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="footer">
-    <p>&copy; 2024 Charity Williams</p>
-</div>
+    <div class="footer">
+        <p>&copy; 2024 Charity Williams</p>
+    </div>
 
 </body>
+
 </html>
