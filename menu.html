@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Menu</title>
+<title>Writings by Charity</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
     body {
@@ -24,12 +24,15 @@
         border-bottom: 1px solid #ddd;
         padding: 30px 0; /* Increased padding top and bottom */
         text-align: center;
+        color: #000; /* Updated header text color to black */
+        font-size: 24px; /* Increased font size */
     }
     .navigation {
         background-color: #DCE9BE; /* Updated menu bar color */
         color: #000; /* Updated text color */
         text-align: center;
         padding: 10px 0; /* Adjusted padding */
+        list-style-type: none; /* Remove default list style */
     }
     .navigation a {
         color: #000; /* Updated text color */
@@ -37,66 +40,20 @@
         margin-right: 20px; /* Add right margin */
         font-size: 20px; /* Updated font size */
     }
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #DCE9BE; /* Updated dropdown background color */
-        min-width: 160px;
-        z-index: 1;
-    }
-    .dropdown-content a {
-        color: #000; /* Updated text color */
-        text-decoration: none;
-        display: block;
-        padding: 10px 20px; /* Added padding */
-    }
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content {
-        display: block;
-    }
-    .menu-icon {
-        display: inline-block;
-        width: 20px;
-        height: 3px;
-        background-color: #000; /* Updated text color */
-        margin-right: 5px; /* Added spacing */
-    }
 </style>
 </head>
 <body>
 
 <div class="header">
-    <h1>Menu</h1>
+    <h1>Writings by Charity</h1>
 </div>
 
 <div class="container">
     <div class="navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <div class="dropdown">
-            <span class="menu-icon"></span>
-            <span class="menu-icon"></span>
-            <span class="menu-icon"></span>
-            <a href="#" class="dropbtn">Short Stories</a>
-            <div class="dropdown-content">
-                <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
-                <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <span class="menu-icon"></span>
-            <span class="menu-icon"></span>
-            <span class="menu-icon"></span>
-            <a href="#" class="dropbtn">Mini Stories</a>
-            <div class="dropdown-content">
-                <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
-                <a href="mini_stories_creative_fiction.html">Creative Fiction Writings</a>
-            </div>
-        </div>
+        <a href="short_stories_creative_nonfiction.html">Short Stories</a>
+        <a href="mini_stories_creative_nonfiction.html">Mini Stories</a>
     </div>
 </div>
 
