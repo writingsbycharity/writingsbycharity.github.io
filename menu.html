@@ -37,15 +37,14 @@
         text-decoration: none;
         margin-right: 20px; /* Add right margin */
         font-size: 20px; /* Updated font size */
+        display: block; /* Display as block to stack vertically */
     }
     .dropdown-content {
         display: none;
         position: absolute;
         background-color: #DCE9BE;
-        width: 160px;
+        min-width: 160px;
         z-index: 1;
-        padding: 10px;
-        box-sizing: border-box;
     }
     .dropdown-content a {
         color: #000;
@@ -57,38 +56,3 @@
     .dropdown:focus-within .dropdown-content {
         display: block;
     }
-</style>
-</head>
-<body>
-
-<div class="header">
-    <h1>Menu</h1>
-</div>
-
-<div class="container">
-    <div class="navigation">
-        <div class="dropdown">
-            <a href="#">Home</a>
-        </div>
-        <div class="dropdown">
-            <a href="#">About</a>
-        </div>
-        <div class="dropdown">
-            <a href="#">Short Stories</a>
-            <div class="dropdown-content">
-                <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writing</a>
-                <a href="short_stories_creative_fiction.html">Creative Fiction Writing</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">Mini Stories</a>
-            <div class="dropdown-content">
-                <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writing</a>
-                <a href="mini_stories_creative_fiction.html">Creative Fiction Writing</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
