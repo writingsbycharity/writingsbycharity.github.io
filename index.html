@@ -31,18 +31,36 @@
         text-align: left; /* Align left */
         padding: 10px 20px; /* Adjust padding */
         cursor: pointer; /* Add pointer cursor */
+        list-style-type: none; /* Remove default list style */
     }
     .navigation a {
         color: black; /* Changed menu font color */
         text-decoration: none;
         margin-right: 20px; /* Add right margin */
+        display: block; /* Display as block to stack vertically */
     }
-    .menu-icon {
-        display: inline-block;
-        width: 20px;
-        height: 3px;
-        background-color: #000; /* Updated text color */
-        margin-right: 5px; /* Added spacing */
+    .footer {
+        background-color: #DCE9BE; /* Changed footer bar color */
+        color: black; /* Changed footer text color */
+        text-align: center;
+        padding: 15px 0; /* Adjusted padding */
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #DCE9BE; /* Updated dropdown background color */
+        min-width: 160px;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black; /* Updated dropdown font color */
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
     }
 </style>
 </head>
@@ -54,8 +72,13 @@
 </div>
 
 <div class="navigation">
-    <span class="menu-icon"></span>
-    <a href="menu.html" class="dropbtn">Menu</a>
+    <div class="dropdown">
+        <a href="menu.html" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+            <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
+        </div>
+    </div>
 </div>
 
 <div class="container">
