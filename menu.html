@@ -4,57 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Menu</title>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    .menu-item {
-        margin-bottom: 10px;
-    }
-    .menu-item a {
-        text-decoration: none;
-        color: #333;
-        display: block;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 5px;
-    }
-    .menu-item a:hover {
-        background-color: #f9f9f9;
-    }
-    .submenu {
-        margin-left: 20px;
-    }
-</style>
 </head>
 <body>
-
-<div class="container">
-    <div class="menu-item"><a href="index.html">Home</a></div>
-    <div class="menu-item"><a href="about.html">About</a></div>
-    <div class="menu-item">
-        <a href="#">Short Stories</a>
-        <div class="submenu">
-            <a href="#">Creative Non-Fiction Writings</a>
-            <a href="#">Creative Fiction Writings</a>
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Short Stories</a>
+            <div class="dropdown-content">
+                <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">Mini Stories</a>
+            <div class="dropdown-content">
+                <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                <a href="mini_stories_creative_fiction.html">Creative Fiction Writings</a>
+            </div>
         </div>
     </div>
-    <div class="menu-item">
-        <a href="#">Mini Stories</a>
-        <div class="submenu">
-            <a href="#">Creative Non-Fiction Writings</a>
-            <a href="#">Creative Fiction Writings</a>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>
