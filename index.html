@@ -7,10 +7,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
     body {
-        font-family: 'Arial', sans-serif;
+        font-family: 'Courier New', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #FFFFF0; /* Updated background color */
+        background-color: #FFFFF0;
     }
     .container {
         max-width: 1200px;
@@ -18,21 +18,21 @@
         padding: 0 15px;
     }
     .header {
-        background-color: #DCE9BE; /* Updated header color */
-        color: #000; /* Updated text color */
+        background-color: #FFFFF0;
         border-bottom: 1px solid #ddd;
-        padding: 30px 0; /* Increased padding top and bottom */
+        padding: 30px 0;
         text-align: center;
-        font-size: 2em; /* Increased font size */
+        color: #000;
+        font-size: 36px;
     }
     .navigation {
-        background-color: #000; /* Updated navigation background color */
-        color: #FFF; /* Updated navigation text color */
+        background-color: #DCE9BE;
+        color: #fff;
         text-align: left;
         padding: 10px 20px;
     }
     .navigation a {
-        color: #FFF;
+        color: #fff;
         text-decoration: none;
         margin-right: 20px;
     }
@@ -54,7 +54,7 @@
         display: block;
     }
     .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content { /* Show on hover or focus */
+    .dropdown:focus-within .dropdown-content {
         display: block;
     }
     .main {
@@ -63,8 +63,8 @@
         margin-top: 20px;
     }
     .footer {
-        background-color: #000; /* Updated footer background color */
-        color: #FFF; /* Updated footer text color */
+        background-color: #DCE9BE;
+        color: #fff;
         text-align: center;
         padding: 15px 0;
     }
@@ -115,17 +115,38 @@
     <div class="dropdown">
         <a href="menu.html" class="dropbtn">Menu</a>
         <div class="dropdown-content">
-            <a href="short_stories_creative_nonfiction.html">Short Stories - Creative Non-Fiction</a>
-            <a href="short_stories_creative_fiction.html">Short Stories - Creative Fiction</a>
-            <a href="mini_stories_creative_nonfiction.html">Mini Stories - Creative Non-Fiction</a>
-            <a href="mini_stories_creative_fiction.html">Mini Stories - Creative Fiction</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Short Stories</a>
+                <div class="dropdown-content">
+                    <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                    <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Mini Stories</a>
+                <div class="dropdown-content">
+                    <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                    <a href="mini_stories_creative_fiction.html">Creative Fiction Writings</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="main">
-        <!-- Your main content here -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Featured Post</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Short Story: The Forgotten Forest</h3>
+                <p class="card-text">A tale of adventure and mystery...</p>
+                <a href="#" class="btn">Read Story</a>
+            </div>
+        </div>
     </div>
 </div>
 
