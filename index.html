@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
     body {
-        font-family: 'Courier New', monospace;
+        font-family: 'Arial', sans-serif;
         margin: 0;
         padding: 0;
         background-color: #FFFFF0; /* Updated background color */
@@ -18,25 +18,23 @@
         padding: 0 15px;
     }
     .header {
-        background-color: #fff;
+        background-color: #DCE9BE; /* Updated header color */
+        color: #000; /* Updated text color */
         border-bottom: 1px solid #ddd;
         padding: 30px 0; /* Increased padding top and bottom */
         text-align: center;
-    }
-    .header h1 {
-        color: black; /* Updated text color */
-        font-size: 2.5em; /* Increased font size */
+        font-size: 2em; /* Increased font size */
     }
     .navigation {
-        background-color: #333;
-        color: black; /* Updated text color */
-        text-align: left; /* Align left */
-        padding: 10px 20px; /* Adjust padding */
+        background-color: #000; /* Updated navigation background color */
+        color: #FFF; /* Updated navigation text color */
+        text-align: left;
+        padding: 10px 20px;
     }
     .navigation a {
-        color: black; /* Updated text color */
+        color: #FFF;
         text-decoration: none;
-        margin-right: 20px; /* Add right margin */
+        margin-right: 20px;
     }
     .dropdown {
         position: relative;
@@ -50,7 +48,7 @@
         z-index: 1;
     }
     .dropdown-content a {
-        color: black; /* Updated text color */
+        color: #fff;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -65,8 +63,8 @@
         margin-top: 20px;
     }
     .footer {
-        background-color: #333;
-        color: #fff;
+        background-color: #000; /* Updated footer background color */
+        color: #FFF; /* Updated footer text color */
         text-align: center;
         padding: 15px 0;
     }
@@ -115,22 +113,19 @@
 
 <div class="navigation">
     <div class="dropdown">
-        <a href="menu.html" class="dropbtn">Menu</a> <!-- Link to the menu page -->
+        <a href="menu.html" class="dropbtn">Menu</a>
+        <div class="dropdown-content">
+            <a href="short_stories_creative_nonfiction.html">Short Stories - Creative Non-Fiction</a>
+            <a href="short_stories_creative_fiction.html">Short Stories - Creative Fiction</a>
+            <a href="mini_stories_creative_nonfiction.html">Mini Stories - Creative Non-Fiction</a>
+            <a href="mini_stories_creative_fiction.html">Mini Stories - Creative Fiction</a>
+        </div>
     </div>
 </div>
 
 <div class="container">
     <div class="main">
-        <div class="card">
-            <div class="card-header">
-                <h2>Featured Post</h2>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Short Story: The Forgotten Forest</h3>
-                <p class="card-text">A tale of adventure and mystery...</p>
-                <a href="#" class="btn">Read Story</a>
-            </div>
-        </div>
+        <!-- Your main content here -->
     </div>
 </div>
 
