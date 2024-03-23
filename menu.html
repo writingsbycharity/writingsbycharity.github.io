@@ -20,10 +20,11 @@
         text-align: center; /* Center text */
     }
     .header {
-        background-color: #DCE9BE; /* Updated header background color */
+        background-color: #FFFFF0; /* Updated header background color */
         border-bottom: 1px solid #ddd;
         padding: 30px 0; /* Increased padding top and bottom */
         text-align: center;
+        color: #000; /* Updated header text color */
     }
     .navigation {
         background-color: #DCE9BE; /* Updated menu bar color */
@@ -36,8 +37,13 @@
         color: #000; /* Updated text color */
         text-decoration: none;
         margin-right: 20px; /* Add right margin */
-        font-size: 20px; /* Updated font size */
+        font-size: 24px; /* Updated font size */
         display: block; /* Display as block to stack vertically */
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-top: 20px; /* Add margin to separate dropdowns */
     }
     .dropdown-content {
         display: none;
@@ -45,23 +51,24 @@
         background-color: #DCE9BE;
         min-width: 160px;
         z-index: 1;
+        text-align: center; /* Center dropdown content */
     }
     .dropdown-content a {
         color: #000;
         text-decoration: none;
         display: block;
         margin-bottom: 10px;
+        font-size: 24px; /* Updated font size */
     }
     .dropdown:hover .dropdown-content,
     .dropdown:focus-within .dropdown-content {
         display: block;
     }
-    .menu-icon {
-        display: inline-block;
-        width: 20px;
-        height: 3px;
-        background-color: #000;
-        margin-right: 5px;
+    .menu-bar {
+        background-color: #DCE9BE; /* Updated menu bar color */
+        color: #000; /* Updated text color */
+        text-align: center;
+        padding: 10px 0; /* Adjusted padding */
     }
 </style>
 </head>
@@ -73,11 +80,9 @@
 
 <div class="container">
     <div class="navigation">
-        <a href="index.html" class="menu-icon">&#9776;</a>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <div class="dropdown">
-            <span class="menu-icon"></span>
             <a href="#" class="dropbtn">Short Stories</a>
             <div class="dropdown-content">
                 <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
@@ -85,7 +90,6 @@
             </div>
         </div>
         <div class="dropdown">
-            <span class="menu-icon"></span>
             <a href="#" class="dropbtn">Mini Stories</a>
             <div class="dropdown-content">
                 <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
@@ -97,3 +101,4 @@
 
 </body>
 </html>
+
