@@ -43,20 +43,16 @@
     }
     .dropdown-content {
         display: none;
-        position: fixed; /* Fixed position for modal effect */
+        position: absolute;
         background-color: #DCE9BE; /* Updated dropdown background color */
-        width: 100%;
-        left: 0;
-        top: 0;
+        min-width: 160px;
         z-index: 1;
-        padding: 20px; /* Added padding */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
     }
     .dropdown-content a {
         color: #000; /* Updated text color */
         text-decoration: none;
         display: block;
-        margin-bottom: 10px; /* Added spacing between items */
+        padding: 10px 20px; /* Added padding */
     }
     .dropdown:hover .dropdown-content,
     .dropdown:focus-within .dropdown-content {
@@ -79,6 +75,8 @@
 
 <div class="container">
     <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
         <div class="dropdown">
             <span class="menu-icon"></span>
             <span class="menu-icon"></span>
