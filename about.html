@@ -83,21 +83,24 @@
     }
     .btn:hover {
         background-color: #333;
-        color:
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
-   .textbox-container {
+    .textbox-container {
         display: flex;
     }
     .textbox-left {
-        flex: 60%; /* 60% of remaining space */
+        flex: 50%; /* 50% of remaining space */
         padding: 10px;
         margin-right: 10px;
         box-sizing: border-box;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.9s;
     }
     .textbox-right {
-        flex: 40%; /* 40% of remaining space */
+        flex: 50%; /* 50% of remaining space */
         padding: 10px;
         box-sizing: border-box;
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.9s;
     }
     .textbox {
         width: 100%;
@@ -105,6 +108,11 @@
         border: 1px solid #ccc;
         margin-bottom: 10px;
         box-sizing: border-box;
+    }
+    .textbox:hover {
+        background-color: #333;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 </style>
 </head>
@@ -121,20 +129,23 @@
 
 <div class="container">
     <div class="main">
-        <button onclick="www.linkedin.com/in/charity-williams-52159b211/" class="btn">Linkedin</button>
-        <button onclick="window.location.href='https://example.com';" class="btn">Button 2</button>
-        <button onclick="window.location.href='https://example.com';" class="btn">Button 3</button>
-   </div>
+        <textarea rows="1" class="textbox" readonly>Linkedin</textarea>
+        <textarea rows="1" class="textbox" readonly>Button 2</textarea>
+        <textarea rows="1" class="textbox" readonly>Button 3</textarea>
+    </div>
     <div class="textbox-container">
         <div class="textbox-left">
-            <textarea rows="10"
-                <div class="container">
-  </textarea>
-            <textarea class="textbox" rows="4">Text Box 2</textarea>
+            <textarea rows="10" class="textbox">Text Box 1</textarea>
         </div>
-        <div class="column2">
-            <textarea class="textbox" rows="9">Text Box 3</textarea>
+        <div class="textbox-right">
+            <textarea rows="20" class="textbox">Text Box 2</textarea>
         </div>
     </div>
 </div>
 
+<div class="footer">
+    <p>&copy; 2024 Charity Williams</p>
+</div>
+
+</body>
+</html>
