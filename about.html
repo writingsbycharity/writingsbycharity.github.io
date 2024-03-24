@@ -40,22 +40,8 @@
     }
     .main {
         display: flex; /* Use flexbox for columns */
-        justify-content: center; /* Center align items horizontally */
-        margin-top: 1in; /* 1 inch margin from the top */
-    }
-    .column1 {
-        flex: 60%; /* 60% of remaining space */
-        padding: 20px; /* Padding for text boxes */
-    }
-    .column2 {
-        flex: 40%; /* 40% of remaining space */
-        padding: 20px; /* Padding for text box */
-    }
-    .textbox {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
+        justify-content: center; /* Center the buttons */
+        margin-top: 1in; /* 1 inch below the menu bar */
     }
     .btn {
         background-color: white;
@@ -86,20 +72,10 @@
 
 <div class="container">
     <div class="main">
-        <div class="column1">
-            <textarea class="textbox" rows="4">Text Box 1</textarea>
-            <textarea class="textbox" rows="4">Text Box 2</textarea>
-        </div>
-        <div class="column2">
-            <textarea class="textbox" rows="9">Text Box 3</textarea>
-        </div>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 1</button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 2</button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 3</button>
     </div>
-</div>
-
-<div class="main">
-    <button onclick="window.location.href='https://example.com';" class="btn">Button 1</button>
-    <button onclick="window.location.href='https://example.com';" class="btn">Button 2</button>
-    <button onclick="window.location.href='https://example.com';" class="btn">Button 3</button>
 </div>
 
 <div class="footer">
