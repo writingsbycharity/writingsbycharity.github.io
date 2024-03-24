@@ -16,6 +16,17 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
+        display: flex; /* Use flexbox for layout */
+    }
+    .sidebar {
+        width: 25%; /* Set width of sidebar */
+        background-color: #DCE9BE; /* Set background color of sidebar */
+        transition: width 0.5s; /* Add transition for smooth animation */
+        overflow: hidden; /* Hide overflow content */
+    }
+    .main {
+        flex: 1; /* Flex the main content to fill remaining space */
+        padding-left: 20px; /* Add padding to main content */
     }
     .header {
         background-color: #FFFFFF; /* Changed header background color */
@@ -37,39 +48,6 @@
         text-decoration: none;
         margin-right: 20px; /* Add right margin */
     }
-    .main {
-        background-color: #fff;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    .footer {
-        background-color: #DCE9BE; /* Changed footer bar color */
-        color: black; /* Changed footer text color */
-        text-align: center;
-        padding: 15px 0;
-    }
-    .card {
-        background-color: #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .card-header {
-        background-color: #f5f5f5;
-        padding: 15px;
-    }
-    .card-body {
-        padding: 15px;
-    }
-    .card-title {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-        color: #333;
-    }
-    .card-text {
-        margin-bottom: 20px;
-        color: #666;
-    }
     .btn {
         background-color: #333;
         color: #fff;
@@ -82,37 +60,69 @@
     .btn:hover {
         background-color: #555;
     }
+    /* Style for sidebar icon */
+    .sidebar-icon {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #DCE9BE;
+    }
 </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>Charity Williams</h1>
-    <p>Welcome to Writings by Charity!</p>
-</div>
-
-<div class="navigation">
-    <a href="menu.html">Menu</a>
-</div>
-
-<div class="container">
-    <div class="main">
-        <div class="card">
-            <div class="card-header">
-                <h2>Featured Post</h2>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Short Story: The Forgotten Forest</h3>
-                <p class="card-text">A tale of adventure and mystery...</p>
-                <a href="#" class="btn">Read Story</a>
-            </div>
-        </div>
+<div class="sidebar" id="sidebar">
+    <!-- Sidebar content goes here -->
+    <div class="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
     </div>
 </div>
 
-<div class="footer">
-    <p>&copy; 2024 Charity Williams</p>
+<div class="main">
+    <div class="header">
+        <h1>Charity Williams</h1>
+        <p>Welcome to Writings by Charity!</p>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Featured Post</h2>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Short Story: The Forgotten Forest</h3>
+                    <p class="card-text">A tale of adventure and mystery...</p>
+                    <a href="#" class="btn">Read Story</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Charity Williams</p>
+    </div>
 </div>
+
+<!-- Sidebar toggle icon -->
+<div class="sidebar-icon" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+</div>
+
+<script>
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        if (sidebar.style.width === '25%') {
+            sidebar.style.width = '0';
+        } else {
+            sidebar.style.width = '25%';
+        }
+    }
+</script>
 
 </body>
 </html>
