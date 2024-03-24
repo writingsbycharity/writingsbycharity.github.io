@@ -69,12 +69,63 @@
 <div class="navigation">
     <a href="menu.html">Menu</a>
 </div>
+<style>
+    body {
+        font-family: 'Courier New', sans-serif; /* Changed font to Courier New */
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF; /* Updated background color */
+    }
+    .container {
+        max-width: calc(100% - 4in); /* 2 inches on each side */
+        margin: 0 auto;
+        padding: 0 15px;
+        border: 2in solid transparent; /* 2-inch border */
+        display: flex; /* Use flexbox for columns */
+    }
+    .textbox-column {
+        flex: 60%; /* 60% of remaining space */
+        padding: 20px; /* Padding for text boxes */
+    }
+    .textbox {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        resize: vertical; /* Allow vertical resizing */
+    }
+    .preview-column {
+        flex: 40%; /* 40% of remaining space */
+        padding: 20px; /* Padding for text box */
+    }
+    .preview {
+        width: 100%;
+        height: calc(100% - 40px); /* Adjust height for padding */
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Charity Williams</h1>
+    <p>Welcome to Writings by Charity!</p>
+</div>
+    
+<div class="navigation">
+    <a href="menu.html">Menu</a>
+</div>
 
 <div class="container">
-    <div class="main">
-        <button onclick="window.location.href='https://example.com';" class="btn">Button 1</button>
-        <button onclick="window.location.href='https://example.com';" class="btn">Button 2</button>
-        <button onclick="window.location.href='https://example.com';" class="btn">Button 3</button>
+    <div class="textbox-column">
+        <textarea class="textbox" rows="4" placeholder="Text Box 1"></textarea>
+        <textarea class="textbox" rows="4" placeholder="Text Box 2"></textarea>
+    </div>
+    <div class="preview-column">
+        <textarea class="preview" rows="9" placeholder="Text Box 3"></textarea>
     </div>
 </div>
 
@@ -84,3 +135,4 @@
 
 </body>
 </html>
+
