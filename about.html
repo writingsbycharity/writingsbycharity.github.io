@@ -71,6 +71,7 @@
         margin-bottom: 20px;
         color: #666;
     }
+    }
     .btn {
         background-color: white;
         color: black;
@@ -83,24 +84,22 @@
     }
     .btn:hover {
         background-color: #333;
-        color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color:
     }
-    .textbox-container {
+   .textbox-container {
         display: flex;
+        flex-wrap: wrap; /* Allow items to wrap */
+        gap: 10px; /* Gap between items */
     }
     .textbox-left {
-        flex: 50%; /* 50% of remaining space */
+        flex: 50%; /* 50% of container */
         padding: 10px;
-        margin-right: 10px;
         box-sizing: border-box;
-        transition: background-color 0.3s, color 0.3s, box-shadow 0.9s;
     }
     .textbox-right {
-        flex: 50%; /* 50% of remaining space */
+        flex: 50%; /* 50% of container */
         padding: 10px;
         box-sizing: border-box;
-        transition: background-color 0.3s, color 0.3s, box-shadow 0.9s;
     }
     .textbox {
         width: 100%;
@@ -108,11 +107,6 @@
         border: 1px solid #ccc;
         margin-bottom: 10px;
         box-sizing: border-box;
-    }
-    .textbox:hover {
-        background-color: #333;
-        color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 </style>
 </head>
@@ -129,16 +123,14 @@
 
 <div class="container">
     <div class="main">
-        <textarea rows="1" class="textbox" readonly>Linkedin</textarea>
-        <textarea rows="1" class="textbox" readonly>Button 2</textarea>
-        <textarea rows="1" class="textbox" readonly>Button 3</textarea>
-    </div>
-    <div class="textbox-container">
-        <div class="textbox-left">
-            <textarea rows="10" class="textbox">Text Box 1</textarea>
-        </div>
-        <div class="textbox-right">
-            <textarea rows="20" class="textbox">Text Box 2</textarea>
+        <button onclick="window.open('https://www.linkedin.com/in/charity-williams-52159b211/');" class="btn">LinkedIn</button>
+        <div class="textbox-container">
+            <div class="textbox-left">
+                <textarea rows="10" placeholder="Text Box 2"></textarea>
+            </div>
+            <div class="textbox-right">
+                <textarea rows="10" placeholder="Text Box 3"></textarea>
+            </div>
         </div>
     </div>
 </div>
