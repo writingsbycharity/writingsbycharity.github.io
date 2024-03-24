@@ -75,15 +75,24 @@
         background-color: white;
         color: black;
         border: 1px solid black;
-        padding: 15px 150px; /* Increased padding */
+        padding: 15px 0; /* Adjusted padding */
         border-radius: 12px;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s, box-shadow 0.9s;
+        width: 100%; /* Make buttons fill the container width */
     }
     .btn:hover {
         background-color: #333;
-        color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        color:
+    }
+    .textbox-container {
+        display: flex;
+    }
+    .textbox {
+        flex: 1;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
     }
 </style>
 </head>
