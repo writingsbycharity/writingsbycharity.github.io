@@ -13,10 +13,9 @@
         background-color: #FFFFFF; /* Updated background color */
     }
     .container {
-        max-width: calc(100% - 4in); /* 2 inches on each side */
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
-        border: 2in solid transparent; /* 2-inch border */
     }
     .header {
         background-color: #FFFFFF; /* Changed header background color */
@@ -39,15 +38,44 @@
         margin-right: 20px; /* Add right margin */
     }
     .main {
-        display: flex; /* Use flexbox for columns */
-        justify-content: center; /* Center the buttons */
-        margin-top: 1in; /* 1 inch below the menu bar */
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 10px; /* Adjusted margin */
+        text-align: center; /* Center align buttons */
+    }
+    .footer {
+        background-color: #DCE9BE; /* Changed footer bar color */
+        color: black; /* Changed footer text color */
+        text-align: center;
+        padding: 15px 0;
+    }
+    .card {
+        background-color: #fff;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .card-header {
+        background-color: #f5f5f5;
+        padding: 15px;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .card-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .card-text {
+        margin-bottom: 20px;
+        color: #666;
     }
     .btn {
         background-color: white;
         color: black;
         border: 1px solid black;
-        padding: 15px 60px; /* Increased padding */
+        padding: 15px 30px; /* Increased padding */
         border-radius: 3px;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
@@ -56,6 +84,25 @@
         background-color: #333;
         color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Charity Williams</h1>
+    <p>Welcome to Writings by Charity!</p>
+</div>
+
+<div class="navigation">
+    <a href="menu.html">Menu</a>
+</div>
+
+<div class="container">
+    <div class="main">
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 1</button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 2</button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 3</button>
     }
 </style>
 </head>
