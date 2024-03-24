@@ -135,8 +135,11 @@
     function toggleExpand() {
         var expandedContent = document.getElementById('expandedContent');
         expandedContent.classList.toggle('active');
-    }
-</script>
 
-</body>
-</html>
+        var readStoryBtn = document.querySelector('.btn');
+        if (readStoryBtn.textContent === 'Read Story') {
+            readStoryBtn.textContent = 'Hide Story';
+        } else {
+            readStoryBtn.textContent = 'Read Story';
+            expandedContent.classList.remove('active'); // Hide the expanded content
+        }
