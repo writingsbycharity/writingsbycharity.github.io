@@ -85,19 +85,19 @@
         background-color: #333;
         color: white;
     }
-    .textbox-container {
+    .textbox-container,
+    .textbox-left,
+    .textbox-right {
         display: flex;
         flex-wrap: wrap; /* Allow items to wrap */
         gap: 10px; /* Gap between items */
     }
+    .textbox-container,
     .textbox-left,
     .textbox-right {
-        width: 100%; /* 48% of container to allow for gap */
+        width: 100%; 
         padding: 10px;
         box-sizing: border-box;
-    }
-    .textbox-left {
-        margin-right: 4%; /* 4% gap between left and right textboxes */
     }
     .textbox {
        background-color: white;
