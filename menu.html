@@ -20,55 +20,58 @@
         text-align: center; /* Center text */
     }
     .header {
-        background-color: #FFFFF0; /* Updated header background color */
+        background-color: #DCE9BE; /* Updated header background color */
         border-bottom: 1px solid #ddd;
         padding: 30px 0; /* Increased padding top and bottom */
         text-align: center;
-        color: #000; /* Updated header text color */
     }
     .navigation {
         background-color: #DCE9BE; /* Updated menu bar color */
         color: #000; /* Updated text color */
         text-align: center;
         padding: 10px 0; /* Adjusted padding */
-        list-style-type: none; /* Remove default list style */
     }
     .navigation a {
         color: #000; /* Updated text color */
         text-decoration: none;
         margin-right: 20px; /* Add right margin */
-        font-size: 24px; /* Updated font size */
-        display: block; /* Display as block to stack vertically */
+        font-size: 20px; /* Updated font size */
     }
     .dropdown {
         position: relative;
         display: inline-block;
-        margin-top: 20px; /* Add margin to separate dropdowns */
     }
     .dropdown-content {
         display: none;
-        position: absolute;
-        background-color: #DCE9BE;
-        min-width: 160px;
+        position: fixed; /* Fixed position for modal effect */
+        background-color: #DCE9BE; /* Updated dropdown background color */
+        width: 100%;
+        left: 0;
+        top: 0;
         z-index: 1;
-        text-align: center; /* Center dropdown content */
+        padding: 20px; /* Added padding */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
     }
     .dropdown-content a {
-        color: #000;
+        color: #000; /* Updated text color */
         text-decoration: none;
         display: block;
-        margin-bottom: 10px;
-        font-size: 24px; /* Updated font size */
+        margin-bottom: 10px; /* Added spacing between items */
     }
     .dropdown:hover .dropdown-content,
     .dropdown:focus-within .dropdown-content {
         display: block;
     }
-    .menu-bar {
-        background-color: #DCE9BE; /* Updated menu bar color */
-        color: #000; /* Updated text color */
-        text-align: center;
-        padding: 10px 0; /* Adjusted padding */
+    .menu-icon {
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        background-color: #000; /* Updated text color */
+        margin-right: 5px; /* Added spacing */
+    }
+    .menu-line {
+        border-top: 1px solid #DCE9BE; /* Added line color */
+        margin: 10px 0; /* Added margin for spacing */
     }
 </style>
 </head>
@@ -76,26 +79,37 @@
 
 <div class="header">
     <h1>Writings by Charity</h1>
+    <div class="menu-line"></div>
 </div>
 
 <div class="container">
     <div class="navigation">
         <a href="index.html">Home</a>
+        <div class="menu-line"></div>
         <a href="about.html">About</a>
+        <div class="menu-line"></div>
         <div class="dropdown">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
             <a href="#" class="dropbtn">Short Stories</a>
             <div class="dropdown-content">
                 <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
                 <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
             </div>
         </div>
+        <div class="menu-line"></div>
         <div class="dropdown">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
             <a href="#" class="dropbtn">Mini Stories</a>
             <div class="dropdown-content">
                 <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
                 <a href="mini_stories_creative_fiction.html">Creative Fiction Writings</a>
             </div>
         </div>
+        <div class="menu-line"></div>
     </div>
 </div>
 
