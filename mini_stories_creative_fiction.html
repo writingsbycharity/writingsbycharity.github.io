@@ -134,15 +134,14 @@
 <script>
     function toggleExpand() {
         var expandedContent = document.getElementById('expandedContent');
-        expandedContent.classList.toggle('active');
-
-        var readStoryBtn = document.querySelector('.btn');
-        if (readStoryBtn.textContent === 'Read Story') {
-            readStoryBtn.textContent = 'Hide Story';
+        var btn = document.querySelector('.btn');
+        if (expandedContent.style.display === 'none') {
+            expandedContent.style.display = 'block';
+            btn.textContent = 'Hide Story';
         } else {
-            readStoryBtn.textContent = 'Read Story';
-            expandedContent.classList.remove('active'); // Hide the expanded content
-       }
+            expandedContent.style.display = 'none';
+            btn.textContent = 'Read Story';
+        }
     }
 </script>
 
