@@ -41,6 +41,7 @@
         background-color: #fff;
         padding: 20px;
         margin-top: 20px;
+        text-align: center; /* Center align buttons */
     }
     .footer {
         background-color: #DCE9BE; /* Changed footer bar color */
@@ -71,20 +72,18 @@
         color: #666;
     }
     .btn {
-        padding: 1em 2em; /* Increased padding */
-        width: auto; /* Adjusted width */
-        height: auto; /* Adjusted height */
-        background-color: #333;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 18px; /* Increased font size */
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        padding: 5px 15px;
+        border-radius: 3px;
         cursor: pointer;
-        display: inline-block; /* Added display inline-block */
-        margin-bottom: 10px; /* Added margin between buttons */
+        transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     }
     .btn:hover {
-        background-color: #555;
+        background-color: #333;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 </style>
 </head>
@@ -101,15 +100,9 @@
 
 <div class="container">
     <div class="main">
-        <button onclick="window.location.href='https://example.com';" class="btn">
-            <span>Button 1</span>
-        </button>
-        <button onclick="window.location.href='https://example.com';" class="btn">
-            <span>Button 2</span>
-        </button>
-        <button onclick="window.location.href='https://example.com';" class="btn">
-            <span>Button 3</span>
-        </button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 1</button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 2</button>
+        <button onclick="window.location.href='https://example.com';" class="btn">Button 3</button>
     </div>
 </div>
 
