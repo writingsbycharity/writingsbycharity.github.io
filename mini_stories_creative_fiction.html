@@ -165,22 +165,26 @@
 </div>
 
 <script>
-   function toggleExpand() {
-    var expandedContent = document.getElementById('expandedContent');
-    /*var btn = document.querySelector('.btn');*/
-    expandedContent.classList.toggle('active'); // Toggle the 'active' class
-    if (expandedContent.classList.contains('active')) {
-        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
-    } else {
-        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
-    }
+function toggleExpand() {
+  var expandedContent = document.getElementById('expandedContent');
+  var btn = document.querySelector('.btn');
+  expandedContent.classList.toggle('active'); // Toggle the 'active' class
+  if (expandedContent.classList.contains('active')) {
+      btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
+  } else {
+      btn.textContent = 'Read Story'; // Change button text to 'Read Story'
+  }
 }
-var wrap = document.querySelector("#wrap");
-var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split(" ")
-	.map(w => `<span>${w}</span>`).join(" "); 
+
+// Button listener
+document.querySelector(".btn").onclick = function() {
+  var wrap = document.querySelector("#wrap");
+  var textContent = document.querySelector("#text").innerText;
+  wrap.innerHTML = textContent;
+};
+	/*.map(w => `<span>${w}</span>`).join(" "); 
 var spans = document.querySelectorAll("#wrap span");
-var selected = null;
+var selected = null;*/
 
 // Scroll to span function, also highlights the span
 function scrollTo(span) {
