@@ -141,6 +141,7 @@
                 <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.</p>
                 <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
                 <div class="expanded"id="expandedContent">
+		<div id="wrap"></div>
                     <pre id="text">
 	Mike, my boyfriend, decided that he was going to pick me up from work today as some sort of apologetic gesture. He pulled up in his silver Chevy Malibu he had this kind of anxious, worried look on his face. I went to go open the back door to put my bag in, but it was locked; I opened the front door asking him to open the back door, and somewhat reluctantly he did so. I placed my bag in the back seat and saw a pink lacy fabric, it looked like someone tried to shove it under the seat. I picked it up and dangled it on my finger for a moment. 
 	“Mike, what is this?” It’s my worst nightmare. 
@@ -153,7 +154,6 @@
 	“No, I would never cheat on you” 
 	“Micheal, please, you know that I love you. Dragging our relationship in the mud like this is just disrespectful, if it is not my shirt, and it’s not your shirt, then whose shirt could it possibly be? It wasn’t here two days ago when we got groceries, so who’s is it?”
 	“I don’t remember her name."</pre>
-		    <div id="wrap"></div>
                 </div>
             </div>
         </div>
@@ -165,21 +165,20 @@
 </div>
 
 <script>
-  function toggleExpand() {
-  var expandedContent = document.getElementById('expandedContent');
-  var btn = document.querySelector('.btn');
-  expandedContent.classList.toggle('active'); // Toggle the 'active' class
-  if (expandedContent.classList.contains('active')) {
-    btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
-  } else {
-    btn.textContent = 'Read Story'; // Change button text to 'Read Story'
-  }
+   function toggleExpand() {
+    var expandedContent = document.getElementById('expandedContent');
+    /*var btn = document.querySelector('.btn');*/
+    expandedContent.classList.toggle('active'); // Toggle the 'active' class
+    if (expandedContent.classList.contains('active')) {
+        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
+    } else {
+        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
+    }
 }
-
 var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split(/\s+/)
-  .map(w => `<span>${w}</span>`).join(" ");
+wrap.innerHTML = textContent.split(" ")
+	.map(w => `<span>${w}</span>`).join(" "); 
 var spans = document.querySelectorAll("#wrap span");
 var selected = null;
 
@@ -189,7 +188,7 @@ function scrollTo(span) {
   if (selected) {
     selected.className = "";
   }
-  span.className = "red";
+ /* span.className = "red";*/
   selected = span;
 
   // Actual scrolling (span is centered in the wrapper)
@@ -197,14 +196,10 @@ function scrollTo(span) {
 }
 
 // Button listener
-document.querySelector(".btn").onclick = function() {
-  toggleExpand(); // Toggle expand/collapse of the content
-};
-
-// Button listener for scrolling to a random span
 document.querySelector("#button").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
 };
-	
+</script>
+
 </body>
 </html>
