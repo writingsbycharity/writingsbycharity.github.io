@@ -161,6 +161,7 @@ wrap.innerHTML = textContent.split("text")
 var spans = document.querySelectorAll("#wrap span");
 var selected = null
 var textContent = document.querySelector("#text").innerText;
+textContent = textContent.replace(/\t/g, '&emsp;'); // Replace tabs with inverted tabs
 textContent = textContent.replace(/"/g, '<br>"'); // Add new line before quotes
 document.querySelector("#text").innerHTML = textContent;
 
