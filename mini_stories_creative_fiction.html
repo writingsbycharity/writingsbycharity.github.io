@@ -145,7 +145,7 @@
 
 <script>
    function toggleExpand() {
-    var expandedContent = document.getElementById('expandedContent');
+    var expandedContent = document.getElementById('text');//changed 'text' it was 'expandedcontent'
     var btn = document.querySelector('.btn');
     expandedContent.classList.toggle('active'); // Toggle the 'active' class
     if (expandedContent.classList.contains('active')) {
@@ -154,11 +154,11 @@
         btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
 }
-var wrap = document.querySelector(".expanded");
-var textContent = document.querySelector("#text").innerText;
+var wrap = document.querySelector("expandedcontent");
+var textContent = document.querySelector("#").innerText;
 wrap.innerHTML = textContent.split("")
   .map(w => `<span>${w}</span>`).join("");	
-var spans = document.querySelectorAll("#wrap span");
+var spans = document.querySelectorAll(".expanded span");// added .expanded 
 var selected = null
 
 // Scroll to span function, also highlights the span
