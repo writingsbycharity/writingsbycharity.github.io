@@ -177,8 +177,8 @@
 }
 var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split(" ")
-	.map(w => `<span>${w}</span>`).join(" "); 
+wrap.innerHTML = textContent.split(/\s+/)
+  .map(w => `<span>${w}</span>`).join(" ");
 var spans = document.querySelectorAll("#wrap span");
 var selected = null;
 
@@ -188,7 +188,7 @@ function scrollTo(span) {
   if (selected) {
     selected.className = "";
   }
- /* span.className = "red";*/
+  span.className = "red";
   selected = span;
 
   // Actual scrolling (span is centered in the wrapper)
@@ -196,10 +196,6 @@ function scrollTo(span) {
 }
 
 // Button listener
-document.querySelector("#button").onclick = function() {
+document.querySelector(".btn").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
 };
-</script>
-
-</body>
-</html>
