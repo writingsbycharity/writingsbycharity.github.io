@@ -85,6 +85,9 @@
     .btn:hover {
         background-color: #555;
     }
+    .expanded {
+    display: none; /* Hide the text by default */
+}
 </style>
 </head>
 <body>
@@ -132,16 +135,15 @@
 </div>
 
 <script>
-    function toggleExpand() {
-        var expandedContent = document.getElementById('expandedContent');
-        var btn = document.querySelector('.btn');
-        if (expandedContent.style.display === 'none') {
-            expandedContent.style.display = 'block';
-            btn.textContent = 'Hide Story';
-        } else {
-            expandedContent.style.display = 'none';
-            btn.textContent = 'Read Story';
-        }
+   function toggleExpand() {
+    var expandedContent = document.getElementById('expandedContent');
+    var btn = document.querySelector('.btn');
+    if (expandedContent.style.display === 'none' || expandedContent.style.display === '') {
+        expandedContent.style.display = 'block'; // Show the text
+        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
+    } else {
+        expandedContent.style.display = 'none'; // Hide the text
+        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
 </script>
 
