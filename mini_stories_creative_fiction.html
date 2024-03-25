@@ -29,7 +29,7 @@
         font-weight: 200; /* or use a specific value like 300 for lighter font weight */
     }
     .navigation {
-        background-color: #B0BA98; /* Changed menu bar color */
+        background-color: #DCE9BE; /* Changed menu bar color */
         color: black; /* Changed menu font color */
         text-align: left; /* Align left */
         padding: 10px 20px; /* Adjusted padding */
@@ -46,7 +46,7 @@
         margin-top: 20px;
     }
     .footer {
-        background-color: #B0BA98; /* Changed footer bar color */
+        background-color: #DCE9BE; /* Changed footer bar color */
         color: black; /* Changed footer text color */
         text-align: center;
         padding: 15px 0;
@@ -68,6 +68,7 @@
     text-align: justify; /* Justify the text */
     /*white-space: pre-wrap;*/
     word-wrap: break-word;
+    overflow: hidden;
    }
     .card-title {
         margin-top: 0;
@@ -83,8 +84,8 @@
         word-wrap: break-word;
     }
     .btn {
-        background-color: #B0BA98;
-        color: #333;
+        background-color: #333;
+        color: #fff;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -95,28 +96,28 @@
         background-color: #555;
     }
     .expanded {
-    display: none;
-    line-height: 2;
-    max-width: 100%;
-    margin: 0; 
-    padding: 0 2in; 
-    overflow-y: scroll; 
-    height: 120px;
-    /* overflow-y: auto;
+    display: none; /* Hide the text by default */
     white-space: pre-wrap;
-    word-wrap: break-word;*/
+    line-height: 2;
+    max-width: 100%; /* Set the max-width to 100% */
+    margin: 0; /* Remove margin */
+    padding: 0 2in; 
+    overflow-y: auto;
+    /*white-space: pre-wrap;*/
+    word-wrap: break-word;
     }
     .expanded.active {
     display: block; /* Show the text when 'active' class is present */
     }
-   /* .pre { 
+    .pre { 
+    overflow-x: auto
     text-align: justify; /* Justify the text */
     /* white-space: pre-wrap;*/`
-   /* word-wrap: break-word; 
-    }*/
-/*	#wrap {
-  height: 120px;
-  overflow-y: scroll; */
+    word-wrap: break-word;
+    }
+	#wrap {
+  height: 70px;
+  overflow-y: scroll;
 }
 </style>
 </head>
@@ -143,7 +144,7 @@
                 <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.</p>
                 <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
                 <div class="expanded"id="expandedContent">
-                    <pre id="text">
+                    <pre id="wrap">
 	Mike, my boyfriend, decided that he was going to pick me up from work today as some sort of apologetic gesture. He pulled up in his silver Chevy Malibu he had this kind of anxious, worried look on his face. I went to go open the back door to put my bag in, but it was locked; I opened the front door asking him to open the back door, and somewhat reluctantly he did so. I placed my bag in the back seat and saw a pink lacy fabric, it looked like someone tried to shove it under the seat. I picked it up and dangled it on my finger for a moment. 
 	“Mike, what is this?” It’s my worst nightmare. 
 	“What’re you talking about? It looks like one of your shirts.” His face says it all the worried look on his face got worse. 
@@ -155,8 +156,8 @@
 	“No, I would never cheat on you” 
 	“Micheal, please, you know that I love you. Dragging our relationship in the mud like this is just disrespectful, if it is not my shirt, and it’s not your shirt, then whose shirt could it possibly be? It wasn’t here two days ago when we got groceries, so who’s is it?”
 	“I don’t remember her name."</pre>
-		<div id="wrap"></div>
-        	</div>
+		    <div id="wrap"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -169,7 +170,7 @@
 <script>
    function toggleExpand() {
     var expandedContent = document.getElementById('expandedContent');
-    /*var btn = document.querySelector('.btn');*/
+    var btn = document.querySelector('.btn');
     expandedContent.classList.toggle('active'); // Toggle the 'active' class
     if (expandedContent.classList.contains('active')) {
         btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
@@ -179,8 +180,8 @@
 }
 var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split(/\s+/)	
-	.map(w => `<span>${w}</span>`).join(" "); 
+wrap.innerHTML = textContent.split(" ")
+  .map(w => `<span>${w}</span>`).join(" ");
 var spans = document.querySelectorAll("#wrap span");
 var selected = null;
 
@@ -190,7 +191,7 @@ function scrollTo(span) {
   if (selected) {
     selected.className = "";
   }
- /* span.className = "red";*/
+  span.className = "red";
   selected = span;
 
   // Actual scrolling (span is centered in the wrapper)
