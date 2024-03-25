@@ -63,29 +63,28 @@
         background-color: #f5f5f5;
         padding: 15px;
     }
-   .card-body {
+.card-body {
     padding: 15px;
     color: #666;
     text-align: justify; /* Justify the text */
-    white-space: nowrap;
     word-wrap: break-word;
-    overflow: line-break;
-	text-overflow: ellipsis;
-   }
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds max height */
+    max-height: calc(100vh - 400px); /* Set max height to 100% of viewport height minus header and button heights */
+}
     .card-title {
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 1.5rem;
         color: #333;
     }
-     .card-text {
-        margin-bottom: 20px;
-        color: #666;
-        text-align: justify; /* Justify the text */
-	white-space: nowrap;
-        word-wrap: break-word;
-	text-overflow: ellipsis;
-    }
+    .card-text {
+   	 margin-bottom: 20px;
+   	 color: #666;
+   	 text-align: justify; /* Justify the text */
+   	 word-wrap: break-word;
+   	 overflow-y: auto; /* Allow vertical scrolling if content exceeds max height */
+   	 max-height: calc(100vh - 400px); /* Set max height to 100% of viewport height minus header and button heights */
+}
     .btn {
         background-color: #DCE9BE;
         color: #333;
@@ -101,25 +100,25 @@
 	border-outline: #333;
     }
     .expanded {
-    display: none; /* Hide the text by default */
-    white-space: nowrap;
-    line-height: 2;
-    max-height: calc(100vh - 250px);  /* Set the max-width to 100% */
-    margin: 0; /* Remove margin */
-    padding: 0 2in; 
-    overflow-y: auto;
-    word-wrap: break-word;
+    	display: none; /* Hide the text by default */
+    	white-space: nowrap;
+    	line-height: 2;
+    	max-height: calc(100vh - 250px);  /* Set the max-width to 100% */
+    	margin: 0; /* Remove margin */
+    	padding: 0 2in; 
+    	overflow-y: auto;
+    	word-wrap: break-word;
 	text-overflow: ellipsis;
 	overflow-x:line-break; 
     }
     .expanded.active {
-    display: block; /* Show the text when 'active' class is present */
+    	display: block; /* Show the text when 'active' class is present */
     }
     .pre { 
-    overflow-y: auto
-    text-align: justify; /* Justify the text */
-    white-space: nowrap;
-    word-wrap: break-word;
+    	overflow-y: auto
+    	text-align: justify; /* Justify the text */
+    	white-space: nowrap;
+    	word-wrap: break-word;
 	overflow-x:line-break;
 	text-overflow: ellipsis;
     }
