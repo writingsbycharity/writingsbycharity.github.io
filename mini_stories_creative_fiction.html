@@ -156,9 +156,9 @@
 }
 var wrap = document.querySelector(".expanded");
 var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split("text")
-  .map(w => `<span>${w}</span>`).join(" ");	
-var spans = document.querySelectorAll("#wrap span");
+wrap.innerHTML = textContent.split("")
+  .map(w => `<span>${w}</span>`).join("");	
+/*var spans = document.querySelectorAll("#wrap span");
 var selected = null
 
 // Scroll to span function, also highlights the span
