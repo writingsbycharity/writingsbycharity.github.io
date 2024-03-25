@@ -189,7 +189,7 @@ function scrollTo(span) {
   if (selected) {
     selected.className = "";
   }
-  span.className = "red";
+ /* span.className = "red";*/
   selected = span;
 
   // Actual scrolling (span is centered in the wrapper)
@@ -197,7 +197,7 @@ function scrollTo(span) {
 }
 
 // Button listener
-document.querySelector(".btn").onclick = function() {
+document.querySelector("#button").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
 };
 </script>
