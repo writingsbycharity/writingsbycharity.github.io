@@ -180,7 +180,7 @@
 }
 var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split(" ")
+wrap.innerHTML = textContent.split("text")
   .map(w => `<span>${w}</span>`).join(" ");	
 /*var spans = document.querySelectorAll("#wrap span");
 var selected = null;*/
@@ -191,7 +191,7 @@ function scrollTo(span) {
   if (selected) {
     selected.className = "";
   }
-  span.className = "red";
+  /*span.className = "red";*/
   selected = span;
 
   // Actual scrolling (span is centered in the wrapper)
