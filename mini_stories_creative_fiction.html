@@ -158,11 +158,11 @@ var wrap = document.querySelector(".expanded");
 var textContent = document.querySelector("#text").innerText;
 wrap.innerHTML = textContent.split("")
   .map(w => `<span>${w}</span>`).join("");	
-/*var spans = document.querySelectorAll("#wrap span");
+var spans = document.querySelectorAll("#wrap span");
 var selected = null
 
 // Scroll to span function, also highlights the span
-/*function scrollTo(span) {
+function scrollTo(span) {
   // Highlighting
   if (selected) {
     selected.className = "";
@@ -177,7 +177,7 @@ var selected = null
 // Button listener
 document.querySelector("#button").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
-};*/ 
+};
 </script>
 
 </body>
