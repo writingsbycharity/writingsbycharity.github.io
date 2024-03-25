@@ -177,7 +177,7 @@
 }
 var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
-wrap.innerHTML = textContent.split(" ")
+wrap.innerHTML = textContent.split(/\s+/)	
 	.map(w => `<span>${w}</span>`).join(" "); 
 var spans = document.querySelectorAll("#wrap span");
 var selected = null;
