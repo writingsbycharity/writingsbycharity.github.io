@@ -144,17 +144,18 @@
                 <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.</p>
                 <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
                 <div class="expanded"id="expandedContent">
-                    <pre>     Mike, my boyfriend, decided that he was going to pick me up from work today as some sort of apologetic gesture. He pulled up in his silver Chevy Malibu he had this kind of anxious, worried look on his face. I went to go open the back door to put my bag in, but it was locked; I opened the front door asking him to open the back door, and somewhat reluctantly he did so. I placed my bag in the back seat and saw a pink lacy fabric, it looked like someone tried to shove it under the seat. I picked it up and dangled it on my finger for a moment. 
-		“Mike, what is this?” It’s my worst nightmare. 
-		“What’re you talking about? It looks like one of your shirts.” His face says it all the worried look on his face got worse. 
-		“Micheal, this is not my shirt.” There is no way he thinks that I am dumb enough to believe that this is my shirt; I knew that after the other night, he would want to see other girls, but I didn’t think that he would have it in him to actually do so. 
-		“Who else’s shirt would it be?” 
-		“That’s my exact thought, who’s shirt is it Micheal?” Now, there are two ways he can go about this; he can either tell me the truth now, and depending on that truth, we can work through it or, he can lie. 
-		“Jessica I swear on my life that it’s your shirt, how else would I get another woman’s shirt in the back of my car?” Alright then, Looks like he chose to lie. 
-		“Micheal, after the other night I knew you would want an escape route, I understand that you don’t feel the same way, but that does not mean that lying to me is okay. Did you cheat on me?” 
-		“No, I would never cheat on you” 
-		“Micheal, please, you know that I love you. Dragging our relationship in the mud like this is just disrespectful, if it is not my shirt, and it’s not your shirt, then whose shirt could it possibly be? It wasn’t here two days ago when we got groceries, so who’s is it?”
-		“I don’t remember her name." </pre>
+                    <pre id="text">
+	Mike, my boyfriend, decided that he was going to pick me up from work today as some sort of apologetic gesture. He pulled up in his silver Chevy Malibu he had this kind of anxious, worried look on his face. I went to go open the back door to put my bag in, but it was locked; I opened the front door asking him to open the back door, and somewhat reluctantly he did so. I placed my bag in the back seat and saw a pink lacy fabric, it looked like someone tried to shove it under the seat. I picked it up and dangled it on my finger for a moment. 
+	“Mike, what is this?” It’s my worst nightmare. 
+	“What’re you talking about? It looks like one of your shirts.” His face says it all the worried look on his face got worse. 
+	“Micheal, this is not my shirt.” There is no way he thinks that I am dumb enough to believe that this is my shirt; I knew that after the other night, he would want to see other girls, but I didn’t think that he would have it in him to actually do so. 
+	“Who else’s shirt would it be?” 
+	“That’s my exact thought, who’s shirt is it Micheal?” Now, there are two ways he can go about this; he can either tell me the truth now, and depending on that truth, we can work through it or, he can lie. 
+	“Jessica I swear on my life that it’s your shirt, how else would I get another woman’s shirt in the back of my car?” Alright then, Looks like he chose to lie. 
+	“Micheal, after the other night I knew you would want an escape route, I understand that you don’t feel the same way, but that does not mean that lying to me is okay. Did you cheat on me?” 
+	“No, I would never cheat on you” 
+	“Micheal, please, you know that I love you. Dragging our relationship in the mud like this is just disrespectful, if it is not my shirt, and it’s not your shirt, then whose shirt could it possibly be? It wasn’t here two days ago when we got groceries, so who’s is it?”
+	“I don’t remember her name."</pre>
 		    <div id="wrap"></div>
                 </div>
             </div>
@@ -178,8 +179,8 @@
     }
 }
 var wrap = document.querySelector("#wrap");
-wrap.innerHTML = "Lorem ipsum dolor sit amet. "
-  .repeat(30).split(" ")
+var textContent = document.querySelector("#text").innerText;
+wrap.innerHTML = textContent.split(" ")
   .map(w => `<span>${w}</span>`).join(" ");
 var spans = document.querySelectorAll("#wrap span");
 var selected = null;
