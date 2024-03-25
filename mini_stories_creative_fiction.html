@@ -13,7 +13,7 @@
         background-color: #FFFFFF; 
     }
     .container {
-        max-width: 1200px;
+        max-width: 100px;
         margin: 0 auto;
         padding: 0 15px;
     }
@@ -51,26 +51,23 @@
         text-align: center;
         padding: 15px 0;
     }
-   .card {
-    background-color: #fff;
-  /*  margin-bottom: 20px;*/
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-height: 100%;
-    overflow-x: line-break;
-	text-overflow: ellipsis;
+  .card {
+	background-color: #fff;
+    	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    	max-height: 100%;
+    	overflow-x: hidden;
    }
     .card-header {
         background-color: #f5f5f5;
         padding: 15px;
     }
-   .card-body {
-    padding: 15px;
-    color: #666;
-    text-align: justify; /* Justify the text */
-    white-space: nowrap;
-    word-wrap: break-word;
-    overflow: line-break;
-	text-overflow: ellipsis;
+  .card-body {
+    	padding: 15px;
+    	color: #666;
+    	text-align: justify; /* Justify the text */
+    	white-space: pre-wrap;
+    	word-wrap: break-word;
+    	overflow: hidden;
    }
     .card-title {
         margin-top: 0;
@@ -83,8 +80,8 @@
         color: #666;
         text-align: justify; /* Justify the text */
 	white-space: nowrap;
-        word-wrap: break-word;
-	text-overflow: ellipsis;
+        word-wrap: pre-wrap;
+	text-overflow: break-word;
     }
     .btn {
         background-color: #DCE9BE;
@@ -99,30 +96,40 @@
         background-color: #FFF;
 	color: #333;
 	border-outline: #333;
+	border-radius: 2px;
     }
-    .expanded {
-    display: none; /* Hide the text by default */
-    white-space: nowrap;
-    line-height: 2;
-    max-height: calc(100vh - 250px);  /* Set the max-width to 100% */
-    margin: 0; /* Remove margin */
-    padding: 0 2in; 
-    overflow-y: auto;
-    word-wrap: break-word;
-	text-overflow: ellipsis;
-	overflow-x:line-break; 
+  .expanded {
+    	display: none; /* Hide the text by default */
+    	white-space: pre-wrap;
+    	line-height: 2;
+    	max-height: calc(100vh - 250px);  /* Set the max-width to 100% */
+    	margin: 0; /* Remove margin */
+    	padding: 0 2in; 
+    	overflow-y: auto;
+    	word-wrap: break-word;
+    	overflow-x: hidden;
     }
     .expanded.active {
-    display: block; /* Show the text when 'active' class is present */
+    	display: block; /* Show the text when 'active' class is present */
     }
     .pre { 
-    overflow-y: auto
-    text-align: justify; /* Justify the text */
-    white-space: nowrap;
-    word-wrap: break-word;
-	overflow-x:line-break;
-	text-overflow: ellipsis;
+    	overflow-y: auto;
+    	text-align: justify; /* Justify the text */
+    	white-space: pre-wrap;
+   	 word-wrap: break-word;
+    	overflow-x: hidden;
     }
+    .text-box {
+    	display: none;
+    	border: 3px solid black;
+    	padding: 10px;
+    	margin-top: 20px;
+    	white-space: pre-wrap;
+    	word-wrap: break-word;
+    	overflow-y: auto;
+    	height: calc(100vh - 400px);
+    }
+
 </style>
 </head>
 <body>
