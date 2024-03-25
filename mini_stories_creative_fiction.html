@@ -165,16 +165,17 @@
 </div>
 
 <script>
-   function toggleExpand() {
-    var expandedContent = document.getElementById('expandedContent');
-    /*var btn = document.querySelector('.btn');*/
-    expandedContent.classList.toggle('active'); // Toggle the 'active' class
-    if (expandedContent.classList.contains('active')) {
-        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
-    } else {
-        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
-    }
+  function toggleExpand() {
+  var expandedContent = document.getElementById('expandedContent');
+  var btn = document.querySelector('.btn');
+  expandedContent.classList.toggle('active'); // Toggle the 'active' class
+  if (expandedContent.classList.contains('active')) {
+    btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
+  } else {
+    btn.textContent = 'Read Story'; // Change button text to 'Read Story'
+  }
 }
+
 var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
 wrap.innerHTML = textContent.split(/\s+/)
@@ -197,5 +198,10 @@ function scrollTo(span) {
 
 // Button listener
 document.querySelector(".btn").onclick = function() {
+  toggleExpand(); // Toggle expand/collapse of the content
+};
+
+// Button listener for scrolling to a random span
+document.querySelector("#button").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
 };
