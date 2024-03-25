@@ -53,11 +53,10 @@
     }
    .card {
     background-color: #fff;
-  /*  margin-bottom: 20px;*/
+    margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     max-height: 100%;
-    overflow-x: line-break;
-	text-overflow: ellipsis;
+    overflow: hidden;
    }
     .card-header {
         background-color: #f5f5f5;
@@ -67,10 +66,9 @@
     padding: 15px;
     color: #666;
     text-align: justify; /* Justify the text */
-    white-space: nowrap;
+    white-space: pre-wrap;
     word-wrap: break-word;
-    overflow: line-break;
-	text-overflow: ellipsis;
+    overflow: hidden;
    }
     .card-title {
         margin-top: 0;
@@ -82,13 +80,12 @@
         margin-bottom: 20px;
         color: #666;
         text-align: justify; /* Justify the text */
-	white-space: nowrap;
+	white-space: pre-wrap;
         word-wrap: break-word;
-	text-overflow: ellipsis;
     }
     .btn {
-        background-color: #DCE9BE;
-        color: #333;
+        background-color: #333;
+        color: #fff;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -96,32 +93,27 @@
         display: inline-block;
     }
     .btn:hover {
-        background-color: #FFF;
-	color: #333;
-	border-outline: #333;
+        background-color: #555;
     }
     .expanded {
     display: none; /* Hide the text by default */
-    white-space: nowrap;
+    white-space: pre-wrap;
     line-height: 2;
-    max-height: calc(100vh - 250px);  /* Set the max-width to 100% */
+    max-width: 100%; /* Set the max-width to 100% */
     margin: 0; /* Remove margin */
     padding: 0 2in; 
-    overflow-y: auto;
+    overflow-x: auto;
+    white-space: pre-wrap;
     word-wrap: break-word;
-	text-overflow: ellipsis;
-	overflow-x:line-break; 
     }
     .expanded.active {
     display: block; /* Show the text when 'active' class is present */
     }
     .pre { 
-    overflow-y: auto
+    overflow-x: auto
     text-align: justify; /* Justify the text */
-    white-space: nowrap;
+    white-space: pre-wrap;
     word-wrap: break-word;
-	overflow-x:line-break;
-	text-overflow: ellipsis;
     }
 </style>
 </head>
