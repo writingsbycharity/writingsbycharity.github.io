@@ -176,6 +176,30 @@
         btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
 }
+var wrap = document.querySelector("#wrap");
+wrap.innerHTML = "Lorem ipsum dolor sit amet. "
+  .repeat(30).split(" ")
+  .map(w => `<span>${w}</span>`).join(" ");
+var spans = document.querySelectorAll("#wrap span");
+var selected = null;
+
+// Scroll to span function, also highlights the span
+function scrollTo(span) {
+  // Highlighting
+  if (selected) {
+    selected.className = "";
+  }
+  span.className = "red";
+  selected = span;
+
+  // Actual scrolling (span is centered in the wrapper)
+  wrap.scrollTop = span.offsetTop - 35;
+}
+
+// Button listener
+document.querySelector("#button").onclick = function() {
+  scrollTo(spans[Math.floor(Math.random() * spans.length)]);
+};
 </script>
 
 </body>
