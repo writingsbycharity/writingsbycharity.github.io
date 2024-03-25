@@ -63,9 +63,6 @@
    .card-body {
     padding: 15px;
     color: #666;
-    /*text-align: justify; 
-    word-wrap: break-word;
-    overflow: hidden;*/
    }
     .card-title {
         margin-top: 0;
@@ -76,9 +73,6 @@
      .card-text {
         margin-bottom: 20px;
         color: #666;
-        text-align: justify; 
-	 /*white-space: pre-wrap;
-        word-wrap: break-word;*/
     }
     .btn {
         background-color: #B0BA98;
@@ -164,8 +158,8 @@ var wrap = document.querySelector("#wrap");
 var textContent = document.querySelector("#text").innerText;
 wrap.innerHTML = textContent.split("text")
   .map(w => `<span>${w}</span>`).join(" ");	
-/*var spans = document.querySelectorAll("#wrap span");
-var selected = null;*/
+var spans = document.querySelectorAll("#wrap span");
+var selected = null
 
 // Scroll to span function, also highlights the span
 function scrollTo(span) {
@@ -173,7 +167,7 @@ function scrollTo(span) {
   if (selected) {
     selected.className = "";
   }
-  /*span.className = "red";*/
+  span.className = "red";
   selected = span;
 
   // Actual scrolling (span is centered in the wrapper)
