@@ -145,7 +145,7 @@
 
 <script>
    function toggleExpand() {
-    var expandedContent = document.getElementById('expandedcontent');
+    var expandedContent = document.getElementById("expandedContent");
     var btn = document.querySelector('.btn');
     expandedContent.classList.toggle('active'); // Toggle the 'active' class
     if (expandedContent.classList.contains('active')) {
@@ -154,7 +154,7 @@
         btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
 }
-var wrap = document.querySelector("text");
+var wrap = document.querySelector(".expanded");
 var textContent = document.querySelector("#").innerText;
 wrap.innerHTML = textContent.split("")
   .map(w => `<span>${w}</span>`).join("");	
