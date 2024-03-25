@@ -95,14 +95,14 @@
     .btn:hover {
         background-color: #555;
     }
-    expanded {
+    .expanded {
     display: none; /* Hide the text by default */
     white-space: pre-wrap;
     line-height: 2;
-    max-height: calc(100vh - 250px); /* Set max height to 100% of viewport height minus header and button heights */
-    margin: 0; /* Remove margin */
+    max-width: 60%; /* Set the max-width to 100% */
+    margin: 2; /* Remove margin */
     padding: 0 2in; 
-    overflow-y: auto; /* Allow vertical scrolling if content exceeds max height */
+    overflow-x: auto;
     word-wrap: break-word;
     }
     .expanded.active {
