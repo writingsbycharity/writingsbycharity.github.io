@@ -65,6 +65,8 @@
 	color: #666;
         text-align: justify; /* Justify the text */
 	overflow-x: auto;
+	white-space: pre-wrap;
+        word-wrap: break-word;
     }
     .card-title {
         margin-top: 0;
@@ -77,6 +79,8 @@
         color: #666;
         text-align: justify; /* Justify the text */
 	overflow-x: auto;
+	white-space: pre-wrap;
+        word-wrap: break-word;
     }
     .btn {
         background-color: #333;
@@ -86,9 +90,6 @@
         border-radius: 5px;
         text-decoration: none;
         display: inline-block;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	word-wrap: break-word;
     }
     .btn:hover {
         background-color: #555;
@@ -99,8 +100,10 @@
     line-height: 2;
     max-width: 100%; /* Set the max-width to 100% */
     margin: 0; /* Remove margin */
-    padding: 0 2in; /* Add padding to match the margin */
-    overflow-wrap: break-word; /* Allow the text to wrap at any character */
+    padding: 0 2in; 
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
     }
     .expanded.active {
     display: block; /* Show the text when 'active' class is present */
