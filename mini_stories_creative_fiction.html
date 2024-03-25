@@ -142,13 +142,13 @@
    function toggleExpand() {
     var expandedContent = document.getElementById('expandedContent');
     var btn = document.querySelector('.btn');
-    if (expandedContent.style.display === 'none' || expandedContent.style.display === '') {
-        expandedContent.style.display = 'block'; // Show the text
+    expandedContent.classList.toggle('active'); // Toggle the 'active' class
+    if (expandedContent.classList.contains('active')) {
         btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
     } else {
-        expandedContent.style.display = 'none'; // Hide the text
         btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
+}
 </script>
 
 </body>
