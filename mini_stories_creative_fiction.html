@@ -154,7 +154,7 @@
         btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
 }
-var wrap = document.querySelector("#wrap");
+var wrap = document.querySelector(".expanded");
 var textContent = document.querySelector("#text").innerText;
 wrap.innerHTML = textContent.split("text")
   .map(w => `<span>${w}</span>`).join(" ");	
