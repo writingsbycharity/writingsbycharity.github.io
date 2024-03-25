@@ -68,7 +68,6 @@
     text-align: justify; /* Justify the text */
     /*white-space: pre-wrap;*/
     word-wrap: break-word;
-    overflow: hidden;
    }
     .card-title {
         margin-top: 0;
@@ -110,13 +109,12 @@
     display: block; /* Show the text when 'active' class is present */
     }
     .pre { 
-    overflow-x: auto
     text-align: justify; /* Justify the text */
     /* white-space: pre-wrap;*/`
     word-wrap: break-word;
     }
 	#wrap {
-  height: 70px;
+  height: 120px;
   overflow-y: scroll;
 }
 </style>
@@ -199,7 +197,7 @@ function scrollTo(span) {
 }
 
 // Button listener
-document.querySelector("#button").onclick = function() {
+document.querySelector(".btn").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
 };
 </script>
