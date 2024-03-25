@@ -89,7 +89,9 @@
     display: none; /* Hide the text by default */
     white-space: pre-wrap;
     line-height: 2;
-  overflow-wrap: break sentence; 
+    max-width: calc(100vw - 4in); /* Set the max-width to 100% of the viewport width minus 4 inches for the margin */
+    margin: 0 2in; /* Set the left and right margin to 2 inches */
+    overflow-wrap: break-word; /* Allow the text to wrap at any character */
     }
     .expanded.active {
     display: block; /* Show the text when 'active' class is present */
