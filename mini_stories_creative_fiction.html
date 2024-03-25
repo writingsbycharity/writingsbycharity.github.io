@@ -177,9 +177,9 @@
     }
 }
 var wrap = document.querySelector("#wrap");
-var textContent = document.querySelector("#text").innerText;
+/*var textContent = document.querySelector("#text").innerText;*/
 wrap.innerHTML = textContent.split(" ")
-  .map(w => `<span>${w}</span>`).join(" ");
+/* .map(w => `<span>${w}</span>`).join(" "); */
 var spans = document.querySelectorAll("#wrap span");
 var selected = null;
 
