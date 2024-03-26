@@ -7,10 +7,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
     body {
-        font-family: 'Courier New', sans-serif; /* Changed font to Courier New */
+        font-family: 'Courier New', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #FFFFFF; /* Updated background color */
+        background-color: #FFFFFF; 
     }
     .container {
         max-width: 1200px;
@@ -18,15 +18,15 @@
         padding: 0 15px;
     }
     .header {
-        background-color: #FFFFFF; /* Changed header background color */
+        background-color: #FFFFFF; 
         border-bottom: 1px solid #ddd;
-        padding: 30px 0; /* Increased padding top and bottom */
+        padding: 30px 0; 
         text-align: center;
-        color: #000; /* Changed header text color to black */
-        font-size: 24px; /* Increased font size */
+        color: #000; 
+        font-size: 24px; 
     }
-    .header h1 {
-        font-weight: 200; 
+   .header h1 {
+        font-weight: 200; /* or use a specific value like 300 for lighter font weight */
     }
     .navigation {
         background-color: #B0BA98; /* Changed menu bar color */
@@ -51,31 +51,32 @@
         text-align: center;
         padding: 15px 0;
     }
-    .card {
-        background-color: #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+   .card {
+    background-color: #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   }
     .card-header {
         background-color: #f5f5f5;
         padding: 15px;
     }
-    .card-body {
-        padding: 15px;
-    }
+   .card-body {
+    padding: 15px;
+    color: #666;
+   }
     .card-title {
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 1.5rem;
         color: #333;
     }
-    .card-text {
+     .card-text {
         margin-bottom: 20px;
         color: #666;
     }
     .btn {
-        background-color: #333;
-        color: #fff;
+        background-color: #B0BA98;
+        color: #333;
         padding: 10px 20px;
         border: none;
         border-radius: 5px;
@@ -83,7 +84,17 @@
         display: inline-block;
     }
     .btn:hover {
-        background-color: #555;
+        background-color: #585D4C
+	    color: #555;
+    }
+    .expanded {
+    display: none; 
+    line-height: 2;
+    height: 300px;
+    overflow-y: scroll;
+    }
+    .expanded.active {
+    display: block; /* Show the text when 'active' class is present */
     }
 </style>
 </head>
@@ -91,7 +102,8 @@
 
 <div class="header">
     <h1>Charity Williams</h1>
-    <p>Welcome to Writings by Charity!</p>
+    <p>Mini Stories - Creative Fiction</p>
+  <p> One - Two page short stories </p>
 </div>
 
 <div class="navigation">
@@ -102,12 +114,16 @@
     <div class="main">
         <div class="card">
             <div class="card-header">
-                <h2>Featured Post</h2>
+                <h2>Mini Story</h2>
             </div>
             <div class="card-body">
-                <h3 class="card-title">Short Story: The Forgotten Forest</h3>
-                <p class="card-text">A tale of adventure and mystery...</p>
-                <a href="#" class="btn">Read Story</a>
+                <h3 class="card-title">Mini Story: Malibu</h3>
+                <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.'</p>
+                <a href="mini_stories_creative_fiction.htm" class="btn">Read Story</a>
+                <div class="expanded"id="expandedContent">
+                    <p id="text">"<p>"text"</p>
+		                <div id="expanded"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -117,6 +133,18 @@
     <p>&copy; 2024 Charity Williams</p>
 </div>
 
+<script>
+   function toggleExpand() {
+    var expandedContent = document.getElementById("expandedContent");
+    var btn = document.querySelector('.btn');
+    expandedContent.classList.toggle('active'); // Toggle the 'active' class
+    if (expandedContent.classList.contains('active')) {
+        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
+    } else {
+        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
+    }
+};
+</script>
+
 </body>
 </html>
-
