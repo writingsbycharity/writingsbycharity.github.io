@@ -26,14 +26,6 @@
         text-align: center;
         font-size: 30px;
         font-weight: 100;
-    }
-   /* .header h1, .header h2 {
-        font-weight: 100;
-        ont-size: 40px;/* Larger font size for title and subtitle */
-    } 
-   /* .header h3 { 
-        font-weight: 50;
-        font-size: 30px;*/
     } 
     .navigation {
         background-color: #FFFFFF; /* Updated menu bar color */
@@ -103,38 +95,18 @@
         align-items: center; /* Center items horizontally */
     }
   /* Adjust hover effect for all links */
-.navigation a:hover::after {
-    height: 100%; /* Full height on hover */
-    border-radius: 3px; /* Border radius for rectangle */
-}
-.dropdown:hover .dropdown-content::after {
-    height: 100%; /* Full height on hover */
-    border-radius: 3px; /* Border radius for rectangle */
-}
-.dropdown:focus-within .dropdown-content::after {
-    height: 100%; /* Full height on hover */
-    /* Your other styles here */
-}
-/* Menu items */
-.navigation a:nth-child(1):hover::after {
-    background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
-}
-.navigation a:nth-child(2):hover::after {
-    background-color: rgba(201, 187, 207, 0.5); /* Color for the second word */
-}
-/* Dropdown items */
-.dropdown:hover .dropdown-content::after:nth-child(1):hover {
-    background-color: rgba(255, 207, 129, 0.5); /* Color for the first word in dropdown on hover */
-}
-.dropdown:hover .dropdown-content::after:nth-child(2):hover {
-    background-color: rgba(247, 164, 164, 0.5); /* Color for the second word in dropdown on hover */
-}
-.dropdown:focus-within .dropdown-content(1):hover {
-    background-color: rgba(97, 163, 186, 0.5); /* Color for the third word in dropdown on hover */
-}
-.dropdown:focus-within .dropdown-content:nth-child(2):hover {
-    background-color: rgba(97, 163, 186, 0.5); /* Color for the fourth word in dropdown on hover */
-}
+    .underline1:hover { text-decoration: underline; color: #9CAFAA; }
+    .box1:hover { border: 1px rgba(156, 175, 170, 0.5); padding: 2px; }
+    .underline2:hover { text-decoration: underline; color: #C9BBCF; }
+    .box2:hover { border: 1px rgba(201, 187, 207, 0.5); padding: 2px; }
+    .underline3:hover { text-decoration: underline; color: #FFCF81; }
+    .box3:hover { border: 1px rgba(255, 207, 129, 0.5); padding: 2px; }
+    .underline4:hover { text-decoration: underline; color: #F7A4A4; }
+    .box4:hover { border: 1px rgba(247, 164, 164, 0.5); padding: 2px; }
+    .underline5:hover { text-decoration: underline; color: #61A3BA; }
+    .box5:hover { border: 1px rgba(97, 163, 186, 0.5); padding: 2px; }
+    .underline6:hover { text-decoration: underline; color: #61A3BA; }
+    .box6:hover { border: 1px rgba(97, 163, 186, 0.5); padding: 2px; }
 </style>
 </head>
 <body>
@@ -150,8 +122,8 @@
 
 <div class="container">
     <div class="navigation">
-        <a href="index.html" class="nav-link-hover">Home</a>
-        <a href="about.html" class="nav-link-hover">About</a>
+        <a href="index.html" class=".underline1,.box1">Home</a>
+        <a href="about.html" class=".underline2,.box2">About</a>
         <div class="dropdown">
             <a href="#">Short Stories</a>
             <div class="dropdown-content">
