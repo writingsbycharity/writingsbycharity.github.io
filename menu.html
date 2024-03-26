@@ -101,8 +101,14 @@
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
-  .navigation a:hover::after {
+    .navigation a:hover::after {
     height: 100%; /* Full height on hover */
+    }
+    .dropdown-content b:hover::after {
+     height: 100%; /* Full height on hover */
+    }
+    .dropdown-content a::b:hover::after {
+     height: 100%; /* Full height on hover */
     }
 .navigation a:nth-child(1)::after {
     background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
@@ -110,17 +116,17 @@
 .navigation a:nth-child(2)::after {
     background-color: rgba(201, 187, 207, 0.5); /* Color for the second word */
     }
-.navigation .dropdown a:nth-child(1):hover {
-    background-color: rgba(255, 207, 129, 0.5); /* Color for the third word in dropdown on hover */
+.dropdown-content b:nth-child(1):hover {
+    background-color: rgba(255, 207, 129, 0.5); /* Color for the first word in dropdown on hover */
     }
-.navigation .dropdown a:nth-child(2):hover {
-    background-color: rgba(247, 164, 164, 0.5); /* Color for the fourth word in dropdown on hover */
+.dropdown-content b:nth-child(2):hover {
+    background-color: rgba(247, 164, 164, 0.5); /* Color for the second word in dropdown on hover */
     }
-.navigation .dropdown-content a:nth-child(3):hover {
-    background-color: rgba(97, 163, 186, 0.5); /* Color for the fifth word in dropdown on hover */
+.dropdown-content a::b:nth-child(3):hover {
+    background-color: rgba(97, 163, 186, 0.5); /* Color for the third word in dropdown on hover */
     }
-.navigation .dropdown-content a:nth-child(4::hover {
-    background-color: rgba(97, 163, 186, 0.5); /* Color for the sixth word in dropdown on hover */
+.dropdown-content a::b:nth-child(4):hover {
+    background-color: rgba(97, 163, 186, 0.5); /* Color for the fourth word in dropdown on hover */
     }
 </style>
 </head>
