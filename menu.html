@@ -107,11 +107,11 @@
     height: 100%; /* Full height on hover */
     border-radius: 3px; /* Border radius for rectangle */
 }
-.dropdown-content:hover::after {
+.dropdown:hover .dropdown-content::after {
     height: 100%; /* Full height on hover */
     border-radius: 3px; /* Border radius for rectangle */
 }
-.nav-link-hover::after {
+.dropdown:focus-within .dropdown-content::after {
     height: 100%; /* Full height on hover */
     /* Your other styles here */
 }
@@ -123,16 +123,16 @@
     background-color: rgba(201, 187, 207, 0.5); /* Color for the second word */
 }
 /* Dropdown items */
-.dropdown-content:nth-child(1):hover {
+.dropdown:hover .dropdown-content::after:nth-child(1):hover {
     background-color: rgba(255, 207, 129, 0.5); /* Color for the first word in dropdown on hover */
 }
-.dropdown-content:nth-child(2):hover {
+.dropdown:hover .dropdown-content::after:nth-child(2):hover {
     background-color: rgba(247, 164, 164, 0.5); /* Color for the second word in dropdown on hover */
 }
-.nav-link-hover:nth-child(1):hover {
+.dropdown:focus-within .dropdown-content(1):hover {
     background-color: rgba(97, 163, 186, 0.5); /* Color for the third word in dropdown on hover */
 }
-.nav-link-hover:nth-child(2):hover {
+.dropdown:focus-within .dropdown-content:nth-child(2):hover {
     background-color: rgba(97, 163, 186, 0.5); /* Color for the fourth word in dropdown on hover */
 }
 </style>
