@@ -36,25 +36,28 @@
         color: #000; /* Updated text color */
         text-decoration: none;
         margin-right: 20px; /* Add right margin */
-        font-size: 50px; /* Updated font size */
+        font-size: 30px; /* Updated font size */
         display: block; /* Display as block element */
         padding: 10px 0; /* Add vertical padding */
         position: relative;
         display: inline-block;
+        text-decoration: none; /* Remove default underline */
+        outline: none; /* Remove default outline */
     }
     .navigation a::after {
-        content:'';
+        content: '';
         position: absolute;
         bottom: -1px;
         left: 0;
         width: 100%;
         height: 1px;
         transition: all 0.3s ease; /* Transition for hover effect */
+        background-color: transparent; /* Transparent background */
+        border-radius: 3px; /* Border radius for rectangle */
     }
     .navigation a:hover::after {
         height: 100%; /* Full height on hover */
-       /* background-color: transparent; /* Transparent background */
-        border-radius: 3px; /* Border radius for rectangle */
+        background-color: rgba(255, 207, 129, 0.5); /* Updated underline color */
     }
     .menu-line {
         background-color: #B0BA98; /* Updated menu bar color */
@@ -101,11 +104,11 @@
     .navigation a:hover::after {
         height: 100%; /* Full height on hover */
     }
-    .navigation a:nth-child::after {
-        background-color: rgba(255, 207, 129, 0.5); /* Transparent color for the first word */
+   /* .navigation a:nth-child::after {
+        background-color: rgba(255, 207, 129, 0.5); 
     }
 
-/*.navigation a:nth-child(2)::after {
+.navigation a:nth-child(2)::after {
     background-color: rgba(201, 187, 207, 0.5); 
     }
 
