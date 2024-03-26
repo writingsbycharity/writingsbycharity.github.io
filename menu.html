@@ -34,40 +34,39 @@
         padding: 10px 0; /* Adjusted padding */
     }
     .navigation a {
-    color: #000; /* Updated text color */
-    text-decoration: none;
-    margin-right: 20px; /* Add right margin */
-    font-size: 30px; /* Updated font size */
-    display: block; /* Display as block element */
-    padding: 10px 0; /* Add vertical padding */
-    position: relative;
-    display: inline-block;
-    text-decoration: none; /* Remove default underline */
-    outline: none; /* Remove default outline */
+        color: #000; /* Updated text color */
+        text-decoration: none;
+        margin-right: 20px; /* Add right margin */
+        font-size: 30px; /* Updated font size */
+        display: block; /* Display as block element */
+        padding: 10px 0; /* Add vertical padding */
+        position: relative;
+        display: inline-block;
+        text-decoration: none; /* Remove default underline */
+        outline: none; /* Remove default outline */
     }
     .navigation a::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    transition: all 0.3s ease; /* Transition for hover effect */
-    background-color: transparent; /* Transparent background */
-    border-radius: 3px; /* Border radius for rectangle */
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transition: all 0.3s ease; /* Transition for hover effect */
+        background-color: transparent; /* Transparent background */
+        border-radius: 3px; /* Border radius for rectangle */
     }
     .navigation a:hover::after {
-    height: 100%; /* Full height on hover */
-    background-color: #B0BA98; /* Updated underline color */
+        height: 100%; /* Full height on hover */
+        background-color: #B0BA98; /* Updated underline color */
     }
     .menu-line {
         background-color: #B0BA98; /* Updated menu bar color */
         color: black; /* Updated text color */
         text-align: center;
         padding: 5px 0; /* Adjusted padding */
-        font-size: 20px; /* Updated font size */
-        font-weight: 300;
-        
+        font-size: 80px; /* Updated font size */
+        font-weight: 800;
     }
     .dropdown {
         position: relative;
@@ -97,37 +96,26 @@
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
-   .navigation a::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    transition: all 0.3s ease; /* Transition for hover effect */
-    background-color: transparent; /* Transparent background */
-    border-radius: 3px; /* Border radius for rectangle */
+    .navigation:hover::after {
+        height: 100%; /* Full height on hover */
     }
-.navigation a:hover::after {
-    height: 100%; /* Full height on hover */
-    }
-.navigation a:nth-child(1)::after {
-    background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
+    .navigation:nth-child(1)::after {
+        background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
     }    
-.navigation a:nth-child(2)::after {
-    background-color: rgba(201, 187, 207, 0.5); /* Transparent color for the second word */
+    .navigation:nth-child(2)::after {
+        background-color: rgba(201, 187, 207, 0.5); /* Transparent color for the second word */
     }
-.navigation a:nth-child(3)::after {
-    background-color: rgba(255, 207, 129, 0.5); /* Transparent color for the third word */
+    .navigation:nth-child(3)::after {
+        background-color: rgba(255, 207, 129, 0.5); /* Transparent color for the third word */
     }
-.navigation a:nth-child(4)::after {
-    background-color: rgba(247, 164, 164, 0.5); /* Transparent color for the fourth word */
+    .navigation:nth-child(4)::after {
+        background-color: rgba(247, 164, 164, 0.5); /* Transparent color for the fourth word */
     }
-.navigation a:nth-child(5)::after {
-    background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the fifth word */
+    .navigation:nth-child(5)::after {
+        background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the fifth word */
     }
-.navigation a:nth-child(6)::after {
-    background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the sixth word */
+    .navigation:nth-child(6)::after {
+        background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the sixth word */
     }
 </style>
 </head>
