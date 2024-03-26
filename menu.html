@@ -22,10 +22,18 @@
       .header {
         background-color: #FFFFFF; /* Updated header background color */
         border-bottom: 1px solid #ddd;
-        padding: 40px 0; /* Increased padding top and bottom */
+        padding: 30px 0; /* Increased padding top and bottom */
         text-align: center;
-        font-size: 30px;
+    }
+    .header h1, .header h2 {
         font-weight: 100;
+    } 
+   .header h2 {
+        font-size: 40px;/* Larger font size for title and subtitle */
+    }
+    .header h3 { 
+        font-weight: 50;
+        font-size: 30px;
     } 
     .navigation {
         background-color: #FFFFFF; /* Updated menu bar color */
@@ -34,29 +42,31 @@
         padding: 10px 0; /* Adjusted padding */
     }
     .navigation a {
-        color: #000; /* Updated text color */
-        text-decoration: none;
-        margin-right: 20px; /* Add right margin */
-        font-size: 40px; /* Updated font size */
-        display: block; /* Display as block element */
-        padding: 10px 0; /* Add vertical padding */
-        position: relative;
-        display: inline-block;
+    color: #000; /* Updated text color */
+    text-decoration: none;
+    margin-right: 20px; /* Add right margin */
+    font-size: 30px; /* Updated font size */
+    display: block; /* Display as block element */
+    padding: 10px 0; /* Add vertical padding */
+    position: relative;
+    display: inline-block;
+    text-decoration: none; /* Remove default underline */
+    outline: none; /* Remove default outline */
     }
 .navigation a::after {
-        content:'';
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        transition: all 0.3s ease; /* Transition for hover effect */
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: all 0.3s ease; /* Transition for hover effect */
+    background-color: transparent; /* Transparent background */
+    border-radius: 3px; /* Border radius for rectangle */
     }
 .navigation a:hover::after {
-        height: 100%; /* Full height on hover */
-       /* background-color: transparent; /* Transparent background */
-        border-radius: 3px; /* Border radius for rectangle */
-    /* Adjust hover effect for all links */
+    height: 100%; /* Full height on hover */
+    background-color: #B0BA98; /* Updated underline color */
     }
     .menu-line {
         background-color: #B0BA98; /* Updated menu bar color */
@@ -65,13 +75,14 @@
         padding: 5px 0; /* Adjusted padding */
         font-size: 20px; /* Updated font size */
         font-weight: 300;
+        
     }
     .dropdown {
         position: relative;
         display: inline-block;
         margin-bottom: 10px; /* Add bottom margin */
     }
-    .dropdown-content,  {
+    .dropdown-content {
         display: none;
         position: absolute;
         background-color: #FFFFFF; /* Updated dropdown background color */
@@ -79,7 +90,7 @@
         z-index: 1;
         left: 0; /* Align dropdown to the left */
     }
-    .dropdown-content a{
+    .dropdown-content a {
         color: black; /* Updated dropdown font color */
         padding: 12px 16px;
         text-decoration: none;
@@ -94,19 +105,38 @@
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
-  /* Adjust hover effect for all links */
-    .underline1:hover { text-decoration: underline; color: #9CAFAA; }
-    .box1:hover { border: 1px rgba(156, 175, 170, 0.5); padding: 2px; }
-    .underline2:hover { text-decoration: underline; color: #C9BBCF; }
-    .box2:hover { border: 1px rgba(201, 187, 207, 0.5); padding: 2px; }
-    .underline3:hover { text-decoration: underline; color: #FFCF81; }
-    .box3:hover { border: 1px rgba(255, 207, 129, 0.5); padding: 2px; }
-    .underline4:hover { text-decoration: underline; color: #F7A4A4; }
-    .box4:hover { border: 1px rgba(247, 164, 164, 0.5); padding: 2px; }
-    .underline5:hover { text-decoration: underline; color: #61A3BA; }
-    .box5:hover { border: 1px rgba(97, 163, 186, 0.5); padding: 2px; }
-    .underline6:hover { text-decoration: underline; color: #61A3BA; }
-    .box6:hover { border: 1px rgba(97, 163, 186, 0.5); padding: 2px; }
+   .navigation a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: all 0.3s ease; /* Transition for hover effect */
+    background-color: transparent; /* Transparent background */
+    border-radius: 3px; /* Border radius for rectangle */
+    }
+.navigation a:hover::after {
+    height: 100%; /* Full height on hover */
+    }
+.navigation a:nth-child(1)::after {
+    background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
+    }    
+.navigation a:nth-child(2)::after {
+    background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the second word */
+    }
+.navigation a:nth-child(3)::after {
+    background-color: rgba(201, 187, 207, 0.5); /* Transparent color for the third word */
+    }
+.navigation a:nth-child(4)::after {
+    background-color: rgba(255, 207, 129, 0.5); /* Transparent color for the fourth word */
+    }
+.navigation a:nth-child(5)::after {
+    background-color: rgba(247, 164, 164, 0.5); /* Transparent color for the fifth word */
+    }
+.navigation a:nth-child(6)::after {
+    background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the sixth word */
+    }
 </style>
 </head>
 <body>
@@ -122,12 +152,12 @@
 
 <div class="container">
     <div class="navigation">
-        <a href="index.html" class=".underline1,.box1">Home</a>
-        <a href="about.html" class=".underline2,.box2">About</a>
+        <a href="index.html"class="nth-child(1)">Home</a>
+        <a href="about.html"class="nth-child(2)">About</a>
         <div class="dropdown">
-            <a href="#">Short Stories</a>
+            <a href=class="nth-child(3)">Short Stories</a>
             <div class="dropdown-content">
-                <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                <a href="short_stories_creative_nonfiction.html"class="nth-child(5)">Creative Non-Fiction Writings</a>
                 <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
             </div>
         </div>
