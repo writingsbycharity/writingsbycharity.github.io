@@ -102,26 +102,32 @@
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
-    .navigation a {
-        margin: 10px 0; /* Add space between items */
+  .navigation a:hover::after {
+    height: 100%; /* Full height on hover */
     }
-    .navigation [home="#9CAFAA"]::after {
-         background-color: #9CAFAA;
+
+.navigation a:nth-child(1)::after {
+    background-color: #9CAFAA; /* Color for the first word */
     }
-    .navigation a[about="#9CAFAA""]::after {
-        background-color: #9CAFAA;
+
+.navigation a:nth-child(2)::after {
+    background-color: #9CAFAA; /* Color for the second word */
     }
-    .navigation a[short-stories-color="#C9BBCF"]::after {
-        background-color: #C9BBCF;
+
+.navigation a:nth-child(3)::after {
+    background-color: #C9BBCF; /* Color for the third word */
     }
-    .navigation a[mini-stories-color="#FFCF81"]::after {
-        background-color: #FFCF81;
+
+.navigation a:nth-child(4)::after {
+    background-color: #FFCF81; /* Color for the fourth word */
     }
-     .navigation a[creative-fiction-writings-color="#F7A4A4"]::after {
-         background-color: #F7A4A4;
+
+.navigation a:nth-child(5)::after {
+    background-color: #F7A4A4; /* Color for the fifth word */
     }
-    .navigation a[creative-non-fiction-writings-color="#61A3BA"]::after {
-        background-color: #61A3BA;
+
+.navigation a:nth-child(6)::after {
+    background-color: #61A3BA; /* Color for the sixth word */
     }
 </style>
 </head>
@@ -139,8 +145,6 @@
 <div class="container">
     <div class="navigation">
         <a href="index.html">Home</a>
-        <a href="index.html" home="#9CAFA">Home</a>
-        <a href="index.html" about="#9CAFAA">About</a>
         <a href="about.html">About</a>
         <div class="dropdown">
             <a href="#">Short Stories</a>
