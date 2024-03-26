@@ -51,7 +51,7 @@
         position: relative;
         display: inline-block;
     }
-.navigation a :after {
+.navigation a::after {
         content: '';
         position: absolute;
         bottom: -1px;
@@ -61,7 +61,7 @@
         background-color: #000; /* Border color */
         transition: all 0.3s ease; /* Transition for hover effect */
     }
-.navigation a:hover :after {
+.navigation a:hover::after {
         height: 100%; /* Full height on hover */
         background-color: transparent; /* Transparent background */
         border: 1px solid #000; /* Border color */
