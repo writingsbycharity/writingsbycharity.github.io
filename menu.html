@@ -27,6 +27,10 @@
         font-size: 90;
         font-weight: 100;
     }
+    .h1 {
+        Font-size: 50;
+        font-weight: 100;  
+    }
     .navigation {
         background-color: #FFFFFF; /* Updated menu bar color */
         color: #000; /* Updated text color */
@@ -45,7 +49,7 @@
         text-decoration: none; /* Remove default underline */
         outline: none; /* Remove default outline */
     }
-    .navigation a::after {
+    .body::after {
         content: '';
         position: absolute;
         bottom: -1px;
@@ -56,7 +60,7 @@
         background-color: transparent; /* Transparent background */
         border-radius: 3px; /* Border radius for rectangle */
     }
-    .navigation a:hover::after {
+    .body:hover::after {
         height: 100%; /* Full height on hover */
         background-color: #B0BA98; /* Updated underline color */
     }
@@ -87,49 +91,34 @@
         text-decoration: none;
         display: block;
     }
-     .dropdown-content::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        transition: all 0.3s ease; /* Transition for hover effect */
-        background-color: transparent; /* Transparent background */
-        border-radius: 3px; /* Border radius for rectangle */
-    }
-    .dropdown-content a:hover::after {
-        height: 100%; /* Full height on hover */
-        background-color: #B0BA98; /* Updated underline color */
-    }
     .dropdown:hover .dropdown-content,
     .dropdown:focus-within .dropdown-content {
         display: block;
     }
-    .navigation a {
+    .body {
         display: flex; /* Updated to use flexbox */
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
-    .navigation a, .dropdown-content, .dropdown-content a:hover::after {
+    .body:hover::after {
         height: 100%; /* Full height on hover */
     }
-    .navigation a:nth-child(1)::after {
+    .body:nth-child(1)::after {
         background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
     }    
-    .navigation a:nth-child(2)::after {
+    .body:nth-child(2)::after {
         background-color: rgba(201, 187, 207, 0.5); /* Transparent color for the second word */
     }
-    .dropdown-content:nth-child(3)::after {
+    .body:nth-child(3)::after {
         background-color: rgba(255, 207, 129, 0.5); /* Transparent color for the third word */
     }
-    .dropdown-content:nth-child(4)::after {
+    .body:nth-child(4)::after {
         background-color: rgba(247, 164, 164, 0.5); /* Transparent color for the fourth word */
     }
-    .dropdown-content a:nth-child(5)::after {
+    .body:nth-child(5)::after {
         background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the fifth word */
     }
-    .dropdown-content a:nth-child(6)::after {
+    .body:nth-child(6)::after {
         background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the sixth word */
     }
 </style>
