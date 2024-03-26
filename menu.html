@@ -82,10 +82,25 @@
         left: 0; /* Align dropdown to the left */
     }
     .dropdown-content a {
-        color: black; /* Updated dropdown font color */
+        color: black; 
         padding: 12px 16px;
         text-decoration: none;
         display: block;
+    }
+     .dropdown-content::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        transition: all 0.3s ease; /* Transition for hover effect */
+        background-color: transparent; /* Transparent background */
+        border-radius: 3px; /* Border radius for rectangle */
+    }
+    .dropdown-content a:hover::after {
+        height: 100%; /* Full height on hover */
+        background-color: #B0BA98; /* Updated underline color */
     }
     .dropdown:hover .dropdown-content,
     .dropdown:focus-within .dropdown-content {
@@ -96,7 +111,7 @@
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center items horizontally */
     }
-    .navigation a:hover::after {
+    .navigation a, .dropdown-content, .dropdown-content a:hover::after {
         height: 100%; /* Full height on hover */
     }
     .navigation a:nth-child(1)::after {
@@ -105,16 +120,16 @@
     .navigation a:nth-child(2)::after {
         background-color: rgba(201, 187, 207, 0.5); /* Transparent color for the second word */
     }
-    .navigation a:nth-child(3)::after {
+    .dropdown-content:nth-child(3)::after {
         background-color: rgba(255, 207, 129, 0.5); /* Transparent color for the third word */
     }
-    .navigation a:nth-child(4)::after {
+    .dropdown-content:nth-child(4)::after {
         background-color: rgba(247, 164, 164, 0.5); /* Transparent color for the fourth word */
     }
-    .navigation a:nth-child(5)::after {
+    .dropdown-content a:nth-child(5)::after {
         background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the fifth word */
     }
-    .navigation a:nth-child(6)::after {
+    .dropdown-content a:nth-child(6)::after {
         background-color: rgba(97, 163, 186, 0.5); /* Transparent color for the sixth word */
     }
 </style>
