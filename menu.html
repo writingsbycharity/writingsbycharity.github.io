@@ -79,7 +79,7 @@
         display: inline-block;
         margin-bottom: 10px; /* Add bottom margin */
     }
-    .dropdown-content {
+    .dropdown-content,  {
         display: none;
         position: absolute;
         background-color: #FFFFFF; /* Updated dropdown background color */
@@ -87,7 +87,7 @@
         z-index: 1;
         left: 0; /* Align dropdown to the left */
     }
-    .dropdown-content a {
+    .dropdown-content a, .nav-link-hover {
         color: black; /* Updated dropdown font color */
         padding: 12px 16px;
         text-decoration: none;
@@ -107,38 +107,34 @@
     height: 100%; /* Full height on hover */
     border-radius: 3px; /* Border radius for rectangle */
 }
-
-.dropdown-content a:hover::after {
+.dropdown-content:hover::after {
     height: 100%; /* Full height on hover */
     border-radius: 3px; /* Border radius for rectangle */
+}
+.nav-link-hover::after {
+    height: 100%; /* Full height on hover */
+    /* Your other styles here */
 }
 /* Menu items */
 .navigation a:nth-child(1):hover::after {
     background-color: rgba(156, 175, 170, 0.5); /* Transparent color for the first word */
 }
-
 .navigation a:nth-child(2):hover::after {
     background-color: rgba(201, 187, 207, 0.5); /* Color for the second word */
 }
-
 /* Dropdown items */
-.dropdown-content a:nth-child(1):hover {
+.dropdown-content:nth-child(1):hover {
     background-color: rgba(255, 207, 129, 0.5); /* Color for the first word in dropdown on hover */
 }
-
-.dropdown-content a:nth-child(2):hover {
+.dropdown-content:nth-child(2):hover {
     background-color: rgba(247, 164, 164, 0.5); /* Color for the second word in dropdown on hover */
 }
-
-.dropdown-content a:nth-child(3):hover {
+.nav-link-hover:nth-child(1):hover {
     background-color: rgba(97, 163, 186, 0.5); /* Color for the third word in dropdown on hover */
 }
-
-.dropdown-content a:nth-child(4):hover {
+.nav-link-hover:nth-child(2):hover {
     background-color: rgba(97, 163, 186, 0.5); /* Color for the fourth word in dropdown on hover */
 }
-
-
 </style>
 </head>
 <body>
@@ -154,8 +150,8 @@
 
 <div class="container">
     <div class="navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="index.html" class="nav-link-hover">Home</a>
+        <a href="about.html" class="nav-link-hover">About</a>
         <div class="dropdown">
             <a href="#">Short Stories</a>
             <div class="dropdown-content">
