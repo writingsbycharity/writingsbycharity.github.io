@@ -3,13 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Short Stories - Charity Williams</title>
+<title>Charity Williams - Writings Blog</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+        font-family: 'Courier New', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF; 
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .header {
+        background-color: #FFFFFF; 
+        border-bottom: 1px solid #ddd;
+        padding: 30px 0; 
+        text-align: center;
+        color: #000; 
+        font-size: 24px; 
+    }
+   .header h1 {
+        font-weight: 200; /* or use a specific value like 300 for lighter font weight */
+    }
+    .navigation {
+        background-color: rgba(84, 114, 78, 0.6);
+        color: black; /* Changed menu font color */
+        text-align: left; /* Align left */
+        padding: 10px 20px; /* Adjusted padding */
+        cursor: pointer; /* Add pointer cursor */
+    }
+    .navigation a {
+        color: black; /* Changed menu font color */
+        text-decoration: none;
+        margin-right: 20px; /* Add right margin */
+    }
+    .main {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    .footer {
+        background-color: rgba(84, 114, 78, 0.6);
+        color: black; /* Changed footer text color */
+        text-align: center;
+        padding: 15px 0;
+    }
+   .card {
+    	background-color: #fff;
+    	margin-bottom: 20px;
+    	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   }
+    .card-header {
+        background-color: rgba(84, 114, 78, 0.4);
+        padding: 15px;
+    }
+   .card-body {
+    	padding: 15px;
+    	color: #666;
+   }
+    .card-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: #333;
+    }
+     .card-text {
+        margin-bottom: 20px;
+        color: #666;
+    }
+    .btn {
+        background-color: rgba(84, 114, 78, 0.5);
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .btn:hover {
+        background-color: rgba(84, 114, 78, 0.3);
+	color: #555;
+    }
+    .expanded {
+    	display: none; 
+    	line-height: 2;
+    	height: 300px;
+    	overflow-y: scroll;
+    }
+    .expanded.active {
+    	display: block; /* Show the text when 'active' class is present */
+    }
+.second-btn {
+    }
+</style>
 </head>
 <body>
-    <h1>Short Stories</h1>
-    <h2>Creative Non-Fiction Writings</h2>
-    <!-- Add form or editor for adding/editing posts -->
-    <h2>Creative Fiction Writings</h2>
-    <!-- Add form or editor for adding/editing posts -->
+
+<div class="header">
+    <h1>Charity Williams</h1>
+    <p>Short Stories - Creative Non-Fiction</p>
+</div>
+
+<div class="navigation">
+    <a href="menu.html">Menu</a>
+</div>
+
+<div class="container">
+    <div class="main">
+        <div class="card">
+            <div class="card-header">
+                <h2>Short Story</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Short Story:title</h3>
+                <p class="card-text">description</p>
+                <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
+                <div class="expanded"id="expandedContent">
+                    <p id="text">
+	story
+		    </p>
+		<div id="expanded"></div>
+		</div>
+		 <a href="https://writingsbycharity.github.io/index.html" class="btn second-btn">take me home!</a>
+		</div>
+	   
+
+		<div class="card">
+            		<div class="card-header">
+                	<h2>Mini Story</h2>
+           	     </div>
+		     <div class="card-body">
+                	<h3 class="card-title">Short Story:title</h3>
+                	<p class="card-text">description</p>
+                	<a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
+                	<div class="expanded"id="expandedContent">
+                    	    <p id="text">
+	story
+		    	    </p>
+			<div id="expanded"></div>	
+	    	     </div>
+        	</div>
+    	   </div>
+      </div>
+</div>
+<div class="footer">
+    <p>&copy; 2024 Charity Williams</p>
+</div>
+
+<script>
+   function toggleExpand() {
+    var expandedContent = document.getElementById("expandedContent");
+    var btn = document.querySelector('.btn');
+    expandedContent.classList.toggle('active'); // Toggle the 'active' class
+    if (expandedContent.classList.contains('active')) {
+        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
+    } else {
+        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
+    }
+}
+var wrap = document.querySelector(".expanded");
+var textContent = document.querySelector("#").innerText;
+wrap.innerHTML = textContent.split("")
+  .map(w => `<span>${w}</span>`).join("");	
+var spans = document.querySelectorAll(".expanded span");// added .expanded 
+var selected = null
+
+// Scroll to span function, also highlights the span
+function scrollTo(span) {
+  // Highlighting
+  if (selected) {
+    selected.className = "";
+  }
+  span.className = "red";
+  selected = span;
+
+  // Actual scrolling (span is centered in the wrapper)
+  wrap.scrollTop = span.offsetTop - 35;
+}
+
+// Button listener
+document.querySelector("#button").onclick = function() {
+  scrollTo(spans[Math.floor(Math.random() * spans.length)]);
+};
+</script>
+
 </body>
 </html>
