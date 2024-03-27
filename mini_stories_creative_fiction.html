@@ -88,13 +88,13 @@
 	color: #555;
     }
     .expanded {
-    display: none; 
-    line-height: 2;
-    height: 300px;
-    overflow-y: scroll;
+    	display: none; 
+    	line-height: 2;
+    	height: 300px;
+    	overflow-y: scroll;
     }
     .expanded.active {
-    display: block; /* Show the text when 'active' class is present */
+    	display: block; /* Show the text when 'active' class is present */
     }
 .second-btn {
     }
@@ -137,6 +137,20 @@
 	“I don’t remember her name."
 		    </p>
 		    <div id="expanded"></div>
+		 </div>
+		<div class="card">
+            <div class="card-header">
+                <h2>Mini Story</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Mini Story:title</h3>
+                <p class="card-text">description</p>
+                <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
+                <div class="expanded"id="expandedContent">
+                    <p id="text">
+	story
+		    </p>
+		    <div id="expanded"></div>	
                 </div>
 		<a href="https://writingsbycharity.github.io/index.html" class="btn second-btn">take me home!</a>
             </div>
