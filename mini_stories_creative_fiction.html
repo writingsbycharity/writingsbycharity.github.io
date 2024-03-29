@@ -141,9 +141,6 @@
 		</div>
 		 <a href="https://writingsbycharity.github.io/index.html" class="btn second-btn">take me home!</a>
 		</div>
-		</div>
-		</div>
-	   
 
 		<div class="card">
             		<div class="card-header">
@@ -200,7 +197,9 @@ function scrollTo(span) {
   // Actual scrolling (span is centered in the wrapper)
   wrap.scrollTop = span.offsetTop - 35;
 }
-
+document.querySelector(".btn").onclick = function() {
+  toggleExpand(); // Toggle expand/collapse of the content
+};
 // Button listener
 document.querySelector("#button").onclick = function() {
   scrollTo(spans[Math.floor(Math.random() * spans.length)]);
