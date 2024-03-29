@@ -6,7 +6,7 @@
 <title>Charity Williams - Writings Blog</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
-    body {
+    .body {
         font-family: 'Courier New', sans-serif;
         margin: 0;
         padding: 0;
@@ -45,12 +45,12 @@
         padding: 20px;
         margin-top: 20px;
     }
-    .footer {
+   .footer {
         background-color: rgba(84, 114, 78, 0.6);
         color: black; /* Changed footer text color */
         text-align: center;
         padding: 15px 0;
-    }
+   }
    .card {
     	background-color: #fff;
     	margin-bottom: 20px;
@@ -121,7 +121,7 @@
             </div>
             <div class="card-body">
                 <h3 class="card-title">Mini Story:Malibu</h3>
-                <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.'</p>
+                <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.</p>
                 <a href="#" class="btn" onclick="toggleExpand('expandedContent')">Read Story</a>
                 <div class="expanded" id="expandedContent">
                     <p id="text">
@@ -140,8 +140,7 @@
 		<div id="expanded"></div>
 			
 		</div>
-		 <a href="https://writingsbycharity.github.io/index.html" class="btn second-btn">
-
+		 <a href="https://writingsbycharity.github.io/index.html" class="btn second-btn">take me home!</a>
 		</div>
 
 		<div class="card">
@@ -170,7 +169,7 @@
 
 <script>
    function toggleExpand(id) {
-    var expandedContent = document.getElementById('expanded');
+    var expandedContent = document.getElementById(id); // Select the expanded content based on the ID
     var btn = expandedContent.previousElementSibling;
     expandedContent.classList.toggle('active'); // Toggle the 'active' class
     if (expandedContent.classList.contains('active')) {
@@ -179,6 +178,13 @@
         btn.textContent = 'Read Story'; // Change button text to 'Read Story'
     }
 }
+
+document.querySelectorAll(".btn").forEach(function(button) {
+    button.addEventListener("click", function() {
+        var expandedId = this.getAttribute("data-expanded"); // Get the ID of the expanded content
+        toggleExpand(expandedId); // Call toggleExpand function with the ID
+    });
+});
 var wrap = document.querySelector(".expanded");
 var textContent = document.querySelector("#").innerText;
 wrap.innerHTML = textContent.split("")
@@ -209,3 +215,4 @@ document.querySelector("#button").onclick = function() {
 
 </body>
 </html>
+ok the button still is not opening the text can you fix the code please
