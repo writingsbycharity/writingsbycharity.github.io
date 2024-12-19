@@ -46,16 +46,12 @@
         font-size: 26px;
         text-decoration: none;
         padding: 15px 0;
-        margin: 30px 0;
+        margin: 30px 0; /* Default spacing between buttons */
         border-radius: 8px;
         width: 200px;
         transition: background-color 0.3s ease, color 0.3s ease;
         background-color: transparent;
         position: relative;
-    }
-    .navigation a:hover {
-        color: rgba(84, 114, 78, 1);
-        background-color: rgba(84, 114, 78, 0.2);
     }
     .dropdown {
         position: relative;
@@ -65,7 +61,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        top: 100%; /* Aligns the dropdown directly below the button */
+        top: 100%;
         left: 0;
         background-color: #FFFFFF;
         min-width: 100%;
@@ -89,6 +85,17 @@
         color: black;
         text-align: center;
         padding: 15px 0;
+    }
+
+    /* Additional Spacing for Short Stories and Mini Stories */
+    .navigation .dropdown + .dropdown {
+        margin-top: 50px; /* Increased space specifically between Short Stories and Mini Stories */
+    }
+
+    /* Hover Effects */
+    .navigation a:hover {
+        color: rgba(84, 114, 78, 1);
+        background-color: rgba(84, 114, 78, 0.2);
     }
 </style>
 </head>
