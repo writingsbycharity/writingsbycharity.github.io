@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Charity Williams - Writings Blog</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
     body {
-        font-family: 'Comfortaa', sans-serif; /* Changed font to Comfortaa */
+        font-family: 'Comfortaa', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #FFFFFF; 
+        background-color: #FFFFFF;
+        color: #000;
     }
     .container {
         max-width: 1200px;
@@ -18,27 +19,26 @@
         padding: 0 15px;
     }
     .header {
-        background-color: #FFFFFF; 
+        background-color: #FFFFFF;
         border-bottom: 1px solid #ddd;
-        padding: 30px 0; 
+        padding: 30px 0;
         text-align: center;
-        color: #000; 
-        font-size: 24px; 
+        font-size: 24px;
     }
-   .header h1 {
-        font-weight: 200; /* or use a specific value like 300 for lighter font weight */
+    .header h1 {
+        font-weight: 300;
     }
     .navigation {
         background-color: rgba(84, 114, 78, 0.5);
-        color: black; /* Changed menu font color */
-        text-align: left; /* Align left */
-        padding: 10px 20px; /* Adjusted padding */
-        cursor: pointer; /* Add pointer cursor */
+        color: black;
+        text-align: left;
+        padding: 10px 20px;
     }
     .navigation a {
-        color: black; /* Changed menu font color */
+        color: black;
         text-decoration: none;
-        margin-right: 20px; /* Add right margin */
+        margin-right: 20px;
+        font-size: 16px;
     }
     .main {
         background-color: #fff;
@@ -47,30 +47,30 @@
     }
     .footer {
         background-color: rgba(84, 114, 78, 0.5);
-        color: black; /* Changed footer text color */
+        color: black;
         text-align: center;
         padding: 15px 0;
     }
-   .card {
-    	background-color: #fff;
-    	margin-bottom: 20px;
-    	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-   }
+    .card {
+        background-color: #fff;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
     .card-header {
         background-color: rgba(84, 114, 78, 0.5);
         padding: 15px;
     }
-   .card-body {
-    	padding: 15px;
-    	color: #666;
-   }
+    .card-body {
+        padding: 15px;
+        color: #666;
+    }
     .card-title {
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 1.5rem;
         color: #333;
     }
-     .card-text {
+    .card-text {
         margin-bottom: 20px;
         color: #666;
     }
@@ -82,21 +82,21 @@
         border-radius: 5px;
         text-decoration: none;
         display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
     .btn:hover {
-        background-color: rgba(84, 114, 78, 0.5);
-	color: #555;
+        background-color: rgba(84, 114, 78, 0.3);
+        color: #555;
     }
     .expanded {
-    	display: none; 
-    	line-height: 2;
-    	height: 300px;
-    	overflow-y: scroll;
+        display: none;
+        line-height: 2;
+        height: 300px;
+        overflow-y: scroll;
     }
     .expanded.active {
-    	display: block; /* Show the text when 'active' class is present */
-    }
-.second-btn {
+        display: block;
     }
 </style>
 </head>
@@ -105,7 +105,7 @@
 <div class="header">
     <h1>Charity Williams</h1>
     <p>Mini Stories - Creative Non-Fiction</p>
-  <p> One - Two page short stories </p>
+    <p>One - Two page short stories</p>
 </div>
 
 <div class="navigation">
@@ -114,94 +114,50 @@
 
 <div class="container">
     <div class="main">
+        <!-- Story Card 1 -->
         <div class="card">
             <div class="card-header">
                 <h2>Mini Story</h2>
             </div>
             <div class="card-body">
-                <h3 class="card-title">Mini Story:title</h3>
-                <p class="card-text">description.</p>
-                <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
-                <div class="expanded"id="expandedContent">
-                    <p id="text">
-	story
-		    </p>
-		<div id="expanded"></div>
-		</div>
-		 <a href="https://writingsbycharity.github.io/index.html" class="btn second-btn">take me home!</a>
-		</div>
-	   
+                <h3 class="card-title">Mini Story: Title</h3>
+                <p class="card-text">Description.</p>
+                <a href="#" class="btn" onclick="toggleExpand('expandedContent1')">Read Story</a>
+                <div class="expanded" id="expandedContent1">
+                    <p>Story content goes here...</p>
+                </div>
+                <a href="https://writingsbycharity.github.io/index.html" class="btn">Take me home!</a>
+            </div>
+        </div>
 
-		<div class="card">
-            		<div class="card-header">
-                	<h2>Mini Story</h2>
-           	     </div>
-		     <div class="card-body">
-                	<h3 class="card-title">Mini Story:title</h3>
-                	<p class="card-text">description</p>
-                	<a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
-                	<div class="expanded"id="expandedContent">
-                    	    <p id="text">
-	story
-		    	    </p>
-			<div id="expanded"></div>	
-	    	     </div>
-        	</div>
-    	   </div>
-      </div>
+        <!-- Story Card 2 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Mini Story</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Mini Story: Title</h3>
+                <p class="card-text">Description.</p>
+                <a href="#" class="btn" onclick="toggleExpand('expandedContent2')">Read Story</a>
+                <div class="expanded" id="expandedContent2">
+                    <p>Story content goes here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-</div>
 <div class="footer">
     <p>&copy; 2024 Charity Williams</p>
 </div>
 
-</body>
-</html>
 <script>
-   function toggleExpand(id) {
-    var expandedContent = document.getElementById(id); // Select the expanded content based on the ID
-    var btn = expandedContent.previousElementSibling;
-    expandedContent.classList.toggle('active'); // Toggle the 'active' class
-    if (expandedContent.classList.contains('active')) {
-        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
-    } else {
-        btn.textContent = 'Read Story'; // Change button text to 'Read Story'
+    function toggleExpand(id) {
+        const expandedContent = document.getElementById(id);
+        const btn = expandedContent.previousElementSibling;
+        expandedContent.classList.toggle('active');
+        btn.textContent = expandedContent.classList.contains('active') ? 'Hide Story' : 'Read Story';
     }
-}
-
-document.querySelectorAll(".btn").forEach(function(button) {
-    button.addEventListener("click", function() {
-        var expandedId = this.getAttribute("data-expanded"); // Get the ID of the expanded content
-        toggleExpand(expandedId); // Call toggleExpand function with the ID
-    });
-});
-var wrap = document.querySelector(".expanded");
-var textContent = document.querySelector("#").innerText;
-wrap.innerHTML = textContent.split("")
-  .map(w => `<span>${w}</span>`).join("");	
-var spans = document.querySelectorAll(".expanded span");// added .expanded 
-var selected = null
-
-// Scroll to span function, also highlights the span
-function scrollTo(span) {
-  // Highlighting
-  if (selected) {
-    selected.className = "";
-  }
-  span.className = "red";
-  selected = span;
-
-  // Actual scrolling (span is centered in the wrapper)
-  wrap.scrollTop = span.offsetTop - 35;
-}
-document.querySelector(".btn").onclick = function() {
-  toggleExpand(); // Toggle expand/collapse of the content
-};
-// Button listener
-document.querySelector("#button").onclick = function() {
-  scrollTo(spans[Math.floor(Math.random() * spans.length)]);
-};
 </script>
 
 </body>
