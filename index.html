@@ -54,12 +54,14 @@
     }
     .card {
         background-color: #fff;
-        margin-bottom: 20px;
+        margin-bottom: 30px; /* Increased margin for better spacing */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 15px;
     }
     .card-header {
         background-color: rgba(54, 84, 48, 0.5);
         padding: 15px;
+        margin-bottom: 10px; /* Added margin for visual separation */
     }
     .card-body {
         padding: 15px;
@@ -78,26 +80,18 @@
     .btn {
         background-color: rgba(54, 84, 48, 0.5);
         color: #333;
-        padding: 10px 20px;
+        padding: 15px 30px; /* Adjusted padding for a larger button */
         border: none;
         border-radius: 5px;
         text-decoration: none;
         display: inline-block;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s;
+        margin-top: 15px; /* Added top margin for consistent spacing */
     }
     .btn:hover {
         background-color: rgba(54, 84, 48, 0.3);
         color: #585D4C;
-    }
-    .expanded {
-        display: none;
-        line-height: 2;
-        height: 300px;
-        overflow-y: scroll;
-    }
-    .expanded.active {
-        display: block;
     }
 </style>
 </head>
@@ -114,6 +108,7 @@
 
 <div class="container">
     <div class="main">
+        <!-- Mini Story Card -->
         <div class="card">
             <div class="card-header">
                 <h2>Mini Story</h2>
@@ -125,6 +120,7 @@
             </div>
         </div>
 
+        <!-- Short Story Card -->
         <div class="card">
             <div class="card-header">
                 <h2>Short Story</h2>
@@ -141,6 +137,9 @@
 <div class="footer">
     <p>&copy; 2024 Charity Williams</p>
 </div>
+
+</body>
+</html>
 
 <script>
     function toggleExpand() {
