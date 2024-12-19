@@ -32,14 +32,24 @@
     .navigation {
         background-color: rgba(84, 114, 78, 0.5);
         color: black;
-        text-align: left;
-        padding: 10px 40px;
-        font-size: 18px;
+        text-align: center;
+        padding: 20px 0; /* Adjusted for uniform vertical spacing */
     }
     .navigation a {
         color: black;
         text-decoration: none;
-        margin-right: 20px;
+        font-size: 22px; /* Increased button font size */
+        margin-bottom: 30px; /* Larger spacing between buttons */
+        padding: 20px 30px; /* Increased padding for a larger button area */
+        display: block; /* Make each button on a new line */
+        background-color: rgba(54, 84, 48, 0.5);
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .navigation a:hover {
+        background-color: rgba(54, 84, 48, 0.3);
+        color: #585D4C;
     }
     .main {
         background-color: #fff;
@@ -52,43 +62,19 @@
         text-align: center;
         padding: 15px 0;
     }
-    .card {
-        background-color: #fff;
-        margin-bottom: 30px; /* Increased margin for better spacing */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-    }
-    .card-header {
-        background-color: rgba(54, 84, 48, 0.5);
-        padding: 15px;
-        margin-bottom: 10px; /* Added margin for visual separation */
-    }
-    .card-body {
-        padding: 15px;
-        color: #666;
-    }
-    .card-title {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-        color: #333;
-    }
-    .card-text {
-        margin-bottom: 20px;
-        color: #666;
-    }
     .btn {
         background-color: rgba(54, 84, 48, 0.5);
         color: #333;
-        padding: 15px 30px; /* Adjusted padding for a larger button */
+        font-size: 18px;
+        padding: 15px 30px;
         border: none;
         border-radius: 5px;
         text-decoration: none;
         display: inline-block;
         cursor: pointer;
         transition: background-color 0.3s, color 0.3s;
-        margin-top: 25px; /* Significantly increased top margin */
-        margin-bottom: 40px; /* Significantly increased bottom margin */
+        margin-top: 15px;
+        margin-bottom: 40px;
     }
     .btn:hover {
         background-color: rgba(54, 84, 48, 0.3);
@@ -104,7 +90,10 @@
 </div>
 
 <div class="navigation">
-    <a href="menu.html">Menu</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="short_stories_creative_fiction.html">Short Stories</a>
+    <a href="mini_stories_creative_fiction.html">Mini Stories</a>
 </div>
 
 <div class="container">
