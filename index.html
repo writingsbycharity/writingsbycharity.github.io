@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Charity Williams - Writings Blog</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
     body {
-        font-family: 'Comfortaa', sans-serif; /* Changed font to Comfortaa */
+        font-family: 'Comfortaa', sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #FFFFFF; 
+        background-color: #FFFFFF;
     }
     .container {
         max-width: 1200px;
@@ -18,27 +19,27 @@
         padding: 0 15px;
     }
     .header {
-        background-color: #FFFFFF; 
+        background-color: #FFFFFF;
         border-bottom: 1px solid #ddd;
-        padding: 30px 0; 
+        padding: 30px 0;
         text-align: center;
-        color: #000; 
-        font-size: 24px; 
+        color: #000;
+        font-size: 24px;
     }
-   .header h1 {
-        font-weight: 200; /* or use a specific value like 300 for lighter font weight */
+    .header h1 {
+        font-weight: 300;
     }
     .navigation {
         background-color: rgba(84, 114, 78, 0.5);
-        color: black; /* Changed menu font color */
-        text-align: left; /* Align left */
-        padding: 10px 40px; /* Adjusted padding */
-        cursor: pointer; /* Add pointer cursor */
+        color: black;
+        text-align: left;
+        padding: 10px 40px;
+        font-size: 18px;
     }
     .navigation a {
-        color: black; /* Changed menu font color */
+        color: black;
         text-decoration: none;
-        margin-right: 20px; /* Add right margin */
+        margin-right: 20px;
     }
     .main {
         background-color: #fff;
@@ -47,124 +48,34 @@
     }
     .footer {
         background-color: rgba(84, 114, 78, 0.5);
-        color: black; /* Changed footer text color */
+        color: black;
         text-align: center;
         padding: 15px 0;
     }
-   .card {
-	background-color: #fff;
-    	margin-bottom: 20px;
-    	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-   }
+    .card {
+        background-color: #fff;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
     .card-header {
         background-color: rgba(54, 84, 48, 0.5);
-;
         padding: 15px;
     }
-   .card-body {
-    	padding: 15px;
-    	color: #666;
-   }
+    .card-body {
+        padding: 15px;
+        color: #666;
+    }
     .card-title {
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 1.5rem;
         color: #333;
     }
-     .card-text {
+    .card-text {
         margin-bottom: 20px;
         color: #666;
     }
-    /*.btn {
-        background-color: rgba(200, 160, 200, 0.4);
-        color: #333;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-    }
-    .btn:hover {
-        background-color: rgba(200, 160, 200, 0.2);
-	    color: #585D4C;*/
-    }
-    .expanded {
-    display: none; 
-    line-height: 2;
-    height: 300px;
-    overflow-y: scroll;
-    }
-    .expanded.active {
-    display: block; /* Show the text when 'active' class is present */
-    }
-.card-header-2 {
-	background-color: rgba(54, 84, 48, 0.5);
-        padding: 15px;
-    }
-   .card-body {
-    	padding: 15px;
-    	color: #666;
-   }
-    .card-title {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-        color: #333;
-    }
-     .card-text {
-        margin-bottom: 20px;
-        color: #666;
-    }
-  /*  .btn {
-        background-color: rgba(200, 160, 200, 0.4);
-        color: #333;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-    }
-    .btn:hover {
-        background-color: rgba(84, 114, 78, 0.3);
-	    color: #585D4C; */
-    }
-    .expanded {
-    display: none; 
-    line-height: 2;
-    height: 300px;
-    overflow-y: scroll;
-    }
-    .expanded.active {
-    display: block; /* Show the text when 'active' class is present */
-    }
-   .card-body-2 {
-    	padding: 15px;
-    	color: #666;
-   }
-    .card-title-2 {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-        color: #333;
-    }
-     .card-text-2 {
-        margin-bottom: 20px;
-        color: #666;
-    }
-    .btn-3 {
-        background-color: rgba(54, 84, 48, 0.5);
-        padding: 15px;
-    }
-    .expanded {
-    display: none; 
-    line-height: 2;
-    height: 300px;
-    overflow-y: scroll;
-    }
-    .expanded.active {
-    display: block; /* Show the text when 'active' class is present */
-    }
- .btn-2 {
+    .btn {
         background-color: rgba(54, 84, 48, 0.5);
         color: #333;
         padding: 10px 20px;
@@ -172,20 +83,22 @@
         border-radius: 5px;
         text-decoration: none;
         display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
     }
-    .btn-2:hover {
-        background-color:  rgba(54, 84, 48, 0.3);
-	    color: #585D4C;
+    .btn:hover {
+        background-color: rgba(54, 84, 48, 0.3);
+        color: #585D4C;
     }
-    .btn-3 {
-	background-color:  rgba(54, 84, 48, 0.3);
-	color: #333;
-	padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-    };
+    .expanded {
+        display: none;
+        line-height: 2;
+        height: 300px;
+        overflow-y: scroll;
+    }
+    .expanded.active {
+        display: block;
+    }
 </style>
 </head>
 <body>
@@ -203,57 +116,43 @@
     <div class="main">
         <div class="card">
             <div class="card-header">
-                      <h2>Mini Story</h2>
+                <h2>Mini Story</h2>
             </div>
             <div class="card-body">
-                <h3 class="card-title">Creative Fiction: Malibu </h3>
+                <h3 class="card-title">Creative Fiction: Malibu</h3>
                 <p class="card-text">This is a single page story that was done in a creative writing class. The prompt was 'person A loves person B, but person B does not love person A.'</p>
-                <a href="https://writingsbycharity.github.io/mini_stories_creative_fiction.html" class="btn-2">take me to the story!</a>
-                <div class="expanded"id="expandedContent">
-                    <p id="text">"<p>"text"</p>
-		                <div id="expanded"></div>
-                </div>
-		</div>
-	   
-
-		<div class="card-2">
-            <div class="card-header-2">
-                      <h2>Short Story</h2>
+                <a href="https://writingsbycharity.github.io/mini_stories_creative_fiction.html" class="btn">Take me to the story!</a>
             </div>
-            <div class="card-body-2">
-                <h3 class="card-title-2">Creative Non-Fiction: Summer 21' </h3>
-                <p class="card-text-2">This short story is equivalent to roughly nine pages, it was written for a creative writing class - the prompt being to create a Non-Fiction short story off of one event that has happened in the writers life. I hope reading this story gives reader even more of an insight on my writing style, but also myself as a person.</p>
-                <a href="https://writingsbycharity.github.io/short_stories_creative_nonfiction.html" class="btn-3">take me to the story!</a>
-                <div class="expanded"id="expandedContent">
-                    <p id="text">"<p>"text"</p>
-		                <div id="expanded"></div>
-                </div>
-		</div>
+        </div>
 
-
-        	</div>
-    	   </div>
-      </div>
+        <div class="card">
+            <div class="card-header">
+                <h2>Short Story</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Creative Non-Fiction: Summer 21'</h3>
+                <p class="card-text">This short story is roughly nine pages, written for a creative writing class. The prompt was to create a Non-Fiction story based on one event in the writer's life.</p>
+                <a href="https://writingsbycharity.github.io/short_stories_creative_nonfiction.html" class="btn">Take me to the story!</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-</div>
 <div class="footer">
     <p>&copy; 2024 Charity Williams</p>
 </div>
 
-</body>
-</html>
 <script>
-   function toggleExpand() {
-    var expandedContent = document.getElementById("expandedContent");
-    var btn = document.querySelector('.btn');
-    expandedContent.classList.toggle('active'); // Toggle the 'active' class
-    if (expandedContent.classList.contains('active')) {
-        btn.textContent = 'Hide Story'; // Change button text to 'Hide Story'
-    } else {
-        btn.textContent = 'take me to the story!'; // Change button text to 'Read Story'
+    function toggleExpand() {
+        var expandedContent = document.getElementById("expandedContent");
+        var btn = document.querySelector('.btn');
+        expandedContent.classList.toggle('active');
+        if (expandedContent.classList.contains('active')) {
+            btn.textContent = 'Hide Story';
+        } else {
+            btn.textContent = 'Take me to the story!';
+        }
     }
-};
 </script>
 
 </body>
