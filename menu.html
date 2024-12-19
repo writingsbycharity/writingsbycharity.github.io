@@ -51,11 +51,11 @@
         background-color: rgba(84, 114, 78, 0.1); /* Button background */
         border-radius: 8px;
         width: 200px; /* Set consistent button width */
-        transition: color 0.3s ease, background-color 0.3s ease;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
     }
     .navigation a:hover {
-        color: rgba(84, 114, 78, 1);
-        background-color: rgba(84, 114, 78, 0.2); /* Highlight effect */
+        color: rgba(84, 114, 78, 1); /* Highlight text color on hover */
+        background-color: rgba(84, 114, 78, 0.2); /* Highlight button on hover */
     }
     .dropdown {
         position: relative;
