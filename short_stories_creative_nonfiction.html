@@ -1,144 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Charity Williams - Story Card</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet" />
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charity Williams - Writings Blog</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
     body {
-      font-family: 'Comfortaa', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #FFFFFF;
-      color: #000;
+        font-family: 'Comfortaa', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+        color: #000;
     }
-
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
     }
-
+    .header {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #ddd;
+        padding: 30px 0;
+        text-align: center;
+        font-size: 24px;
+    }
+    .header h1 {
+        font-weight: 300;
+    }
+    .navigation {
+        background-color: rgba(84, 114, 78, 0.5);
+        color: black;
+        text-align: left;
+        padding: 10px 20px;
+    }
+    .navigation a {
+        color: black;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 16px;
+    }
     .main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 20px;
     }
-
+    .footer {
+        background-color: rgba(84, 114, 78, 0.5);
+        color: black;
+        text-align: center;
+        padding: 15px 0;
+    }
     .card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 30px;
-      margin: 0 auto;
-      max-width: 800px;
-      background-color: #fff;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-
-    .card-header h2 {
-      margin-top: 0;
+    .card-header {
+        background-color: rgba(84, 114, 78, 0.5);
+        padding: 15px;
     }
-
     .card-body {
-      margin-top: 20px;
+        padding: 15px;
+        color: #666;
     }
-
     .card-title {
-      font-size: 22px;
-      margin-bottom: 10px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: #333;
     }
-
     .card-text {
-      font-size: 16px;
-      margin-bottom: 20px;
+        margin-bottom: 20px;
+        color: #666;
     }
-
     .btn {
-      display: inline-block;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      padding: 10px 20px;
-      background-color: transparent;
-      border: 1px solid black;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 16px;
-      color: black;
-      cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease;
+        background-color: rgba(84, 114, 78, 0.5);
+        color: #333;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
-
     .btn:hover {
-      background-color: rgba(84, 114, 78, 0.2);
-      color: rgba(84, 114, 78, 1);
+        background-color: rgba(84, 114, 78, 0.3);
+        color: #555;
     }
-
     .expanded {
-      display: none;
-      margin-top: 20px;
-      text-align: left;
+        display: none;
+        line-height: 2;
+        height: 300px;
+        overflow-y: scroll;
     }
-
-    /* MLA-style formatting just for the expanded story text */
-    .expanded p {
-      font-family: "Times New Roman", serif;
-      font-size: 11pt;
-      line-height: 2;
-      text-indent: 2em;
-      white-space: pre-wrap;
-      margin: 0 0 20px 0;
+    .expanded.active {
+        display: block;
     }
-  </style>
+</style>
 </head>
 <body>
 
-  <div class="container">
+<div class="header">
+    <h1>Charity Williams</h1>
+    <p>Short Stories - Creative Fiction</p>
+</div>
+
+<div class="navigation">
+    <a href="menu.html">Menu</a>
+</div>
+
+<div class="container">
     <div class="main">
-      <!-- Story Card 1 -->
-      <div class="card">
-        <div class="card-header">
-          <h2>Short Story</h2>
+        <!-- Story Card 1 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Short Story</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Short Story: Opportunities</h3>
+                <p class="card-text">This is a short story that I worked on for a Fiction writing class - this highlights just how messy life can be.</p>
+                <a href="#" class="btn" onclick="toggleExpand('expandedContent1')">Read Story</a>
+                <div class="expanded" id="expandedContent1">
+                    <p>
+                        <!-- Shortened story content -->
+                        Serena topples out of bed and melts onto the floor as the sunlight soaks through the broken blinds...
+                        <!-- Full story content -->
+                    </p>
+                </div>
+                <a href="https://writingsbycharity.github.io/index.html" class="btn">Take me home!</a>
+            </div>
         </div>
-        <div class="card-body">
-          <h3 class="card-title">Creative Non-Fiction: Summer 21'</h3>
-          <p class="card-text">
-            This short story explores personal growth during a summer filled with new challenges and opportunities.
-          </p>
 
-          <a href="#" class="btn" onclick="toggleExpand('expandedContent1', this)">Read Story</a>
-
-          <div class="expanded" id="expandedContent1">
-            <p>
-              Charity Williams finally experienced freedom when she moved away from her hometown. The summer of 2021 was not just a season, but a turning point in her life.
-            </p>
-            <p>
-              It began with the quiet realization that comfort was not the same as growth. Each day brought new challenges she hadn’t planned for, but welcomed with open arms.
-            </p>
-            <p>
-              Her journey was marked by slow mornings, handwritten letters, and rediscovering her independence. Through every moment, she learned to trust herself more deeply than she ever had before.
-            </p>
-          </div>
-
-          <a href="https://writingsbycharity.github.io/index.html" class="btn">Take me home!</a>
+        <!-- Story Card 2 -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Mini Story</h2>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Mini Story: Title</h3>
+                <p class="card-text">Description.</p>
+                <a href="#" class="btn" onclick="toggleExpand('expandedContent2')">Read Story</a>
+                <div class="expanded" id="expandedContent2">
+                    <p>
+                        <!-- Add your second story content here -->
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <script>
-    function toggleExpand(id, btn) {
-      var expandedContent = document.getElementById(id);
-      if (expandedContent.style.display === "block") {
-        expandedContent.style.display = "none";
-        btn.textContent = "Read Story";
-      } else {
-        expandedContent.style.display = "block";
-        btn.textContent = "Hide Story";
-      }
+<div class="footer">
+    <p>&copy; 2024 Charity Williams</p>
+</div>
+
+<script>
+    function toggleExpand(id) {
+        const expandedContent = document.getElementById(id);
+        const btn = expandedContent.previousElementSibling;
+        expandedContent.classList.toggle('active');
+        btn.textContent = expandedContent.classList.contains('active') ? 'Hide Story' : 'Read Story';
     }
-  </script>
+</script>
 
 </body>
 </html>
