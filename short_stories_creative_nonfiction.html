@@ -1,114 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Charity Williams - Writings Blog</title>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Comfortaa', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #FFFFFF;
-        color: #000;
-    }
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-    }
-    .header {
-        background-color: #FFFFFF;
-        border-bottom: 1px solid #ddd;
-        padding: 30px 0;
-        text-align: center;
-        font-size: 24px;
-    }
-    .header h1 {
-        font-weight: 300;
-    }
-    .navigation {
-        background-color: rgba(84, 114, 78, 0.5);
-        color: black;
-        padding: 10px 20px;
-    }
-    .navigation a {
-        color: black;
-        text-decoration: none;
-        margin-right: 20px;
-        font-size: 16px;
-    }
-    .main {
-        background-color: #fff;
-        padding: 20px;
-        margin-top: 20px;
-    }
-    .footer {
-        background-color: rgba(84, 114, 78, 0.5);
-        color: black;
-        text-align: center;
-        padding: 15px 0;
-    }
-    .card {
-        background-color: #fff;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .card-header {
-        background-color: rgba(84, 114, 78, 0.5);
-        padding: 15px;
-    }
-    .card-body {
-        padding: 15px;
-        color: #666;
-    }
-    .card-title {
-        margin-top: 0;
-        margin-bottom: 10px;
-        font-size: 1.5rem;
-        color: #333;
-    }
-    .card-text {
-        margin-bottom: 20px;
-        color: #666;
-    }
-    .btn {
-        background-color: rgba(84, 114, 78, 0.5);
-        color: #333;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        display: inline-block;
-        cursor: pointer;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .btn:hover {
-        background-color: rgba(84, 114, 78, 0.3);
-        color: #555;
-    }
-    .expanded {
-        display: none;
-        line-height: 2;
-        height: 300px;
-        overflow-y: scroll;
-    }
-    .expanded.active {
-        display: block;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Williams - Story Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            max-width: 800px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            background-color: #fff;
+        }
+
+        .card-header h2 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        .card-body {
+            text-align: left;
+        }
+
+        .card-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px 0 0;
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgba(84, 114, 78, 0.2);
+            color: rgba(84, 114, 78, 1);
+        }
+
+        .expanded {
+            display: none;
+            margin-top: 20px;
+        }
+
+        /* MLA-style formatting */
+        .expanded p {
+            font-family: "Times New Roman", serif;
+            font-size: 11pt;
+            line-height: 2;
+            text-indent: 2em;
+            margin: 0 1in;
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
 <body>
-
-<div class="header">
-    <h1>Charity Williams</h1>
-    <p>Short Stories - Creative Non-Fiction</p>
-</div>
-
-<div class="navigation">
-    <a href="menu.html">Menu</a>
-</div>
 
 <div class="container">
     <div class="main">
@@ -120,8 +103,8 @@
             <div class="card-body">
                 <h3 class="card-title">Creative Non-Fiction: Summer 21'</h3>
                 <p class="card-text">This short story explores personal growth during a summer filled with new challenges and opportunities.</p>
-                <a href="#" class="btn" onclick="toggleExpand('expandedContent1')">Read Story</a>
-                <div class="expanded" id="expandedContent1" style="display: none;">
+                <a href="#" class="btn" onclick="toggleExpand('expandedContent1', this)">Read Story</a>
+                <div class="expanded" id="expandedContent1">
                     <p>
                         Charity Williams finally experienced freedom when she moved away from her hometown.
                         The summer of 2021 was not just a season, but a turning point in her life.
@@ -141,37 +124,16 @@
     </div>
 </div>
 
-        <!-- Story Card 2 -->
-        <div class="card">
-            <div class="card-header">
-                <h2>Short Story</h2>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Creative Non-Fiction: Swim, Swim, Swim</h3>
-                <p class="card-text">A heartfelt reflection on childhood and how swimming became a lifelong passion.</p>
-                <a href="#" class="btn" onclick="toggleExpand('expandedContent2')">Read Story</a>
-                <div class="expanded" id="expandedContent2">
-                    <p>
-                        <!-- Full story content goes here -->
-                        "Swimmers on your mark, set... GO!" The anthem of my childhood and the beginning of my love for swimming...
-                        <!-- Content truncated for brevity -->
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="footer">
-    <p>&copy; 2024 Charity Williams</p>
-</div>
-
 <script>
-    function toggleExpand(id) {
-        const expandedContent = document.getElementById(id);
-        const btn = expandedContent.previousElementSibling;
-        expandedContent.classList.toggle('active');
-        btn.textContent = expandedContent.classList.contains('active') ? 'Hide Story' : 'Read Story';
+    function toggleExpand(id, btn) {
+        var expandedContent = document.getElementById(id);
+        if (expandedContent.style.display === "block") {
+            expandedContent.style.display = "none";
+            btn.textContent = "Read Story";
+        } else {
+            expandedContent.style.display = "block";
+            btn.textContent = "Hide Story";
+        }
     }
 </script>
 
