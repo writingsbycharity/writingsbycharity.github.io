@@ -21,51 +21,42 @@
     .header {
         background-color: #FFFFFF;
         border-bottom: 1px solid #ddd;
-        padding: 30px 0 10px;
+        padding: 30px 0;
+        text-align: center;
+        font-size: 24px;
     }
     .header h1 {
         font-weight: 300;
-        margin: 0;
-    }
-    .header p {
-        margin: 5px 0 0;
-        font-size: 18px;
     }
     .menu-line {
         background-color: rgba(84, 114, 78, 0.5);
         color: black;
-        padding: 10px 0;
+        text-align: center;
+        padding: 10px 20px;
         font-size: 20px;
     }
     .navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 40px; /* Equal spacing between all buttons */
-        padding: 50px 0;
+        margin: 40px 0;
     }
     .navigation a {
         color: black;
-        font-size: 24px;
+        font-size: 26px;
         text-decoration: none;
-        padding: 12px 0;
+        padding: 15px 0;
+        margin: 30px 0; /* Default spacing between buttons */
         border-radius: 8px;
-        width: 240px;
+        width: 200px;
         transition: background-color 0.3s ease, color 0.3s ease;
         background-color: transparent;
         position: relative;
     }
-    .navigation a:hover {
-        color: rgba(84, 114, 78, 1);
-        background-color: rgba(84, 114, 78, 0.15);
-    }
     .dropdown {
         position: relative;
-        width: 240px;
-    }
-    .dropdown > a::after {
-        content: ' ▼';
-        font-size: 16px;
+        display: inline-block;
+        width: 200px;
     }
     .dropdown-content {
         display: none;
@@ -73,20 +64,15 @@
         top: 100%;
         left: 0;
         background-color: #FFFFFF;
-        width: 100%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-        overflow: hidden;
+        min-width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1;
     }
     .dropdown-content a {
-        padding: 12px 16px;
-        text-align: left;
-        font-size: 18px;
-        border-top: 1px solid #eee;
-    }
-    .dropdown-content a:first-child {
-        border-top: none;
+        color: black;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
     }
     .dropdown-content a:hover {
         background-color: rgba(84, 114, 78, 0.1);
@@ -100,13 +86,24 @@
         text-align: center;
         padding: 15px 0;
     }
+
+    /* Additional Spacing for Short Stories and Mini Stories */
+    .navigation .dropdown + .dropdown {
+        margin-top: 50px; /* Increased space specifically between Short Stories and Mini Stories */
+    }
+
+    /* Hover Effects */
+    .navigation a:hover {
+        color: rgba(84, 114, 78, 1);
+        background-color: rgba(84, 114, 78, 0.2);
+    }
 </style>
 </head>
 <body>
 
 <div class="header">
     <h1>Charity Williams</h1>
-    <p>Writings by Charity</p>
+    <p>Writings by Charity!</p>
 </div>
 
 <div class="menu-line">
@@ -117,31 +114,39 @@
     <div class="navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-
         <div class="dropdown">
-            <a href="#">Weekly Stories</a>
+            <a href="#">Short Stories</a>
             <div class="dropdown-content">
-                <a href="latest_story.html">This Week's Story</a>
-                <a href="archive.html">Story Archive</a>
+                <a href="short_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                <a href="short_stories_creative_fiction.html">Creative Fiction Writings</a>
             </div>
         </div>
-
         <div class="dropdown">
-            <a href="#">Genres</a>
+            <a href="#">Mini Stories</a>
             <div class="dropdown-content">
-                <a href="fiction.html">Fiction</a>
-                <a href="nonfiction.html">Non-Fiction</a>
-                <a href="poetry.html">Poetry</a>
+                <a href="mini_stories_creative_nonfiction.html">Creative Non-Fiction Writings</a>
+                <a href="mini_stories_creative_fiction.html">Creative Fiction Writings</a>
             </div>
         </div>
-
-        <a href="community.html">Community</a>
     </div>
 </div>
 
 <div class="footer">
     <p>&copy; 2024 Charity Williams</p>
 </div>
+
+<script>
+    function toggleExpand(id) {
+        var expandedContent = document.getElementById(id);
+        var btn = expandedContent.previousElementSibling;
+        expandedContent.classList.toggle('active');
+        if (expandedContent.classList.contains('active')) {
+            btn.textContent = 'Hide Story';
+        } else {
+            btn.textContent = 'Read Story';
+        }
+    }
+</script>
 
 </body>
 </html>
