@@ -90,12 +90,17 @@
         background-color: rgba(54, 84, 48, 0.3);
         color: #585D4C;
     }
-    .expanded {
-        display: none;
-        line-height: 2;
-        height: 300px;
-        overflow-y: scroll;
-    }
+ .expanded {
+    display: none;
+    line-height: 2;
+    height: 300px;
+    overflow-y: scroll;
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
     .expanded.active {
         display: block;
     }
@@ -135,19 +140,22 @@
                 <a href="https://writingsbycharity.github.io/short_stories_creative_nonfiction.html" class="btn">Take me to the story!</a>
             </div>
         </div>
-        
+    
       <div class="card">
-            <div class="card-header">
-                <h2>Mini Story</h2>
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">Creative Non-Fiction: Spirals</h3>
-                <p class="card-text">This prose story explores anxiety on a deeper level.</p>
-                <a href="https://writingsbycharity.github.io/mini_stories_creative_nonfiction.html" class="btn">Take me to the story!</a>
-            </div>
+    <div class="card-header">
+        <h2>Mini Story</h2>
+    </div>
+    <div class="card-body">
+        <h3 class="card-title">Creative Non-Fiction: Spirals</h3>
+        <p class="card-text">This prose story explores anxiety on a deeper level.</p>
+        <a href="#" class="btn" onclick="toggleExpand()">Read Story</a>
+        <div class="expanded" id="expandedContent">
+            <p>This is the full story text. Make sure it's wrapped in paragraphs...</p>
+            <p>...and it will stay styled and centered like your other cards.</p>
         </div>
     </div>
 </div>
+
 
 <div class="footer">
     <p>&copy; 2024 Charity Williams</p>
